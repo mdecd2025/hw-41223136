@@ -12,7 +12,52 @@
 <p style="padding-left: 30px;">Homework (30%) - 每週至少提交兩次與課程進度有關的內容, 完成後填回自評表單</p>
 <p style="padding-left: 30px;">Exam (40%) - 建立包含操作流程影片、心得以及提供檔案下載的網頁後填回自評表單</p>
 <p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表單</p><h1>w3</h1>
-<h1>list</h1>
+<p><a href="https://127.0.0.1:9443/get_page/Brython">列出本組組員倉儲及網頁</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document, window
+ 
+# 定義資料來源 URL
+url = "https://mde.tw/list/2a.txt"
+ 
+# 定義要查找的學號列表
+target_ids = ["41223118", "41223122", "41223131", "41223134", "41223136", "41223158"]
+ 
+# 顯示學員總數
+print("正在處理...")
+ 
+# 取得 HTML 中的元素 id 為 "brython_div1"
+brython_div1 = document["brython_div1"]
+ 
+# 使用 JavaScript 的 fetch API 來抓取資料
+def process_data(response_text):
+    # 將抓取到的資料分行
+    data = response_text.splitlines()
+ 
+    # 跳過標題行，取得學員資料
+    all_stud = data[1:]
+ 
+    # 逐行處理學員資料
+    for stud in all_stud:
+        # 假設學員資料的格式為 "學號 學員賬號"
+        student_info = stud.strip().split()  # 使用 split() 將每行分為學號和帳號
+        if len(student_info) == 2:  # 確保每行有學號和帳號
+            student_id = student_info[0].strip()  # 學號
+            student_account = student_info[1].strip()  # 學員賬號
+ 
+            # 檢查學號是否在目標學號列表中
+            if student_id in target_ids:
+                # 創建 GitHub 和作業網站的超鏈接
+                github_link = f"https://github.com/mdecd2025/hw-{student_account}"
+                homework_link = f"https://mdecd2025.github.io/hw-{student_account}/"
+                 
+                # 顯示該學號的 GitHub 和作業網站
+                brython_div1 &lt;= html.A(student_id, href=github_link)  # 學號是 GitHub repo 連結
+                brython_div1 &lt;= " "  # 空格
+                brython_div1 &lt;= html.A("(repo)", href=homework_link)  # 作業網站的超鏈接標題為 (repo)
+                brython_div1 &lt;= html.BR()  # 換行
+ 
+# 使用 JavaScript 的 fetch API 拉取資料
+window.fetch(url).then(lambda response: response.text()).then(process_data)</pre>
+<p><img alt="" height="646" src="/images/cd_hw - Google Chrome 2025_3_7 下午 03_52_16.png" width="482"/></p><h1>list</h1>
 <p>網站：</p>
 <p>41223118：<a href="https://mdecd2025.github.io/hw-zhe41223118/">https://mdecd2025.github.io/hw-zhe41223118/</a></p>
 <p>41223122：<a href="https://mdecd2025.github.io/hw-Spirit0224/content/index.html">https://mdecd2025.github.io/hw-Spirit0224/</a></p>
