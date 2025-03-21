@@ -18,7 +18,13 @@
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b 分組網站與倉儲連結</a></p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fc5cf16eb8c5e621f5398db4ad300f10/raw/88bc893395eae2d9080e2cd12ef1d88b371708b7/2b-1">2b未加入團隊學員</a></p>
-<p></p><h1>list</h1>
+<p></p><h1>task</h1>
+<h2>task1</h2>
+<h2>task2</h2>
+<h2>task3</h2>
+<h2>task4</h2>
+<h2>task5</h2>
+<h2>task6</h2><h1>list</h1>
 <p>網站：</p>
 <p>41223118：<a href="https://mdecd2025.github.io/hw-zhe41223118/">https://mdecd2025.github.io/hw-zhe41223118/</a></p>
 <p>41223122：<a href="https://mdecd2025.github.io/hw-Spirit0224/content/index.html">https://mdecd2025.github.io/hw-Spirit0224/</a></p>
@@ -35,39 +41,52 @@
 <p>41223136：<a href="https://github.com/mdecd2025/hw-41223136">https://github.com/mdecd2025/hw-41223136</a> </p>
 <p>41223158：<a href="https://github.com/mdecd2025/hw-41223158">https://github.com/mdecd2025/hw-41223158</a></p>
 <hr/>
-<p>Brython-列出組員倉儲及網站連結</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 從  Brython 程式庫中的 browser 導入 html, 可用來輸出超文件內容
-# 而所導入的 document 可以指向網頁中的特定 id 內容
-from browser import html, document
-# 建立 url 變數與網站中 2a 學員的學號與帳號資料 URL 網誌字串對應
+<p>Brython-列出組員倉儲及網站<strong><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/090a231f6023298fe6c79d75c648919b/raw/fa0f0e27e983890ed8aad90e573017faa39c9f32/ag4-w1">連結</a></strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document, window
+  
+# 定義資料來源 URL
 url = "https://mde.tw/list/2a.txt"
-# 利用 open() 物件中的 readlines() 方法, 取出網站中的資料並逐行放入數列中, 因此 data 的資料型別為數列
-data = open(url).readlines()
-# 進行資料查驗時, 印出 data 數列內容
-#print(data)
-# 因為學員資料中的第一列為標題, 因此有效資料從索引值 1 開始
-all_stud = data[1:]
-# 利用 len() 函式查驗 all_stud 數列有幾筆資料, 因為要與前後的字串併接, 因此利用 str() 將整數轉為字串
-print("總共有 " + str(len(all_stud)) + "名學員")
-# 
-# 利用 document[] 取得 id 為 "brython_div1" 的位置, 然後與 brython_div1 變數對應
+  
+# 定義要查找的學號列表
+target_ids = ["41223118", "41223122", "41223131", "41223134", "41223136", "41223158"]
+  
+# 顯示學員數量
+print("正在處理...")
+  
+# 取得 HTML 中的元素 id 為 "brython_div1"
 brython_div1 = document["brython_div1"]
-# 利用 Brython 的 "&lt;=" 特殊符號, 將右值帶有字串與超文件內容物件插入 brython_div1 變數所指定的位置
-# 其中利用 html.A 建立 anchor 標註物件, 第一個變數為 anchor 字串, 第二個變數則為 hyper text reference
-brython_div1 &lt;= "1. " + html.A("2a-ag4", href="https://mdecd2025.github.io/2a-ag4/")+ html.A("(repo)", href="https://github.com/mdecd2025/2a-ag4")
-# 利用 html.BR() 插入 break 標註
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "2. " + html.A("41223118", href="https://mdecd2025.github.io/hw-zhe41223118/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-zhe41223118")
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "3. " + html.A("41223122", href="https://mdecd2025.github.io/hw-Spirit0224/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-Spirit0224")
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "4. " + html.A("41223131", href="https://mdecd2025.github.io/hw-yuhao-08/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-yuhao-08")
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "5. " + html.A("41223134", href="https://mdecd2025.github.io/hw-41223134/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223134")
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "6. " + html.A("41223136", href="https://mdecd2025.github.io/hw-41223136/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223136")
-brython_div1 &lt;= html.BR()
-brython_div1 &lt;= "7. " + html.A("41223158", href="https://mdecd2025.github.io/hw-41223158/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223158")</pre>
+  
+# 使用 JavaScript 的 fetch API 來抓取資料
+def process_data(response_text):
+    # 將抓取到的資料分行
+    data = response_text.splitlines()
+  
+    # 跳過標題行，取得學員資料
+    all_stud = data[1:]
+  
+    # 逐行處理學員資料
+    for stud in all_stud:
+        # 假設學員資料的格式為 "學號 學員賬號"
+        student_info = stud.strip().split()  # 使用 split() 將每行分為學號和帳號
+        if len(student_info) == 2:  # 確保每行有學號和帳號
+            student_id = student_info[0].strip()  # 學號
+            student_account = student_info[1].strip()  # 學員賬號
+  
+            # 檢查學號是否在目標學號列表中
+            if student_id in target_ids:
+                # 創建 GitHub 和作業網站的超鏈接
+                github_link = f"https://github.com/mdecd2025/hw-{student_account}"
+                homework_link = f"https://mdecd2025.github.io/hw-{student_account}/"
+                  
+                # 顯示該學號的 GitHub 和作業網站
+                brython_div1 &lt;= html.A(student_id, href=github_link)  # 學號是 GitHub repo 連結
+                brython_div1 &lt;= " "  # 空格
+                brython_div1 &lt;= html.A("(repo)", href=homework_link)  # 作業網站的超鏈接標題為 (repo)
+                brython_div1 &lt;= html.BR()  # 換行
+  
+# 使用 JavaScript 的 fetch API 拉取資料
+window.fetch(url).then(lambda response: response.text()).then(process_data)
+</pre>
 <p></p><h1>Final</h1>
 <p><span>期末協同專案執行過程影片、簡報與 PDf 報告檔案 (六人一組) (30%)</span></p>
 <p><span>題目: <span style="background-color: #ccffcc;">Webots 動態投籃模擬系統的協同設計</span></span></p>
