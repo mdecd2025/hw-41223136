@@ -29,8 +29,86 @@
 <p>task5 與 task6 則為 HW3 的主要內容</p>
 <p>task5 (Webots Tutorial 1 ~3)</p>
 <p>task6 (Webots Tutorial 4 ~6)</p><h2>task1</h2>
-<p></p><h2>task2</h2>
-<h2>task3</h2>
+<p><span>利用既有的 Python 可攜系統建立各版本的 Python 可攜環境。</span></p>
+<p><span><em><strong>1. </strong></em>下載 <a href="http://229.cycu.org/portable_python311.7z">portable_python311.7z</a>，<span>一套尚未安裝 pip 的 Python 3.11 可攜程式環境。</span></span></p>
+<p><span><span><em><strong>2. </strong></em>目錄中的 start_ipv6.bat 啟動可攜系統，</span></span>接著修改 start_ipv6.bat，利用 Search - Replace，Find 欄位填上 Python311，Replace 欄位填上 Python313 後，按下 Replace All，便可將啟動檔中所有 Python311 設定改為 Python313，另存修改後的檔案為 start_python313.bat。</p>
+<p><em><strong>3. </strong></em><span>以 stop.bat 關閉 start_ipv6.bat 開啟的可攜系統，改以心建立的 start_python313.bat 開啟可攜環境，之後在命令列輸入 python，確認目前的 Python 版本為 3.13.2 後，利用 Ctrl + z 退出 Python 後，利用 pip list 確認目前的 Python 3.13.2 系統尚未配置 pip 模組管理工具。</span></p>
+<p><span><em><strong>4. </strong></em>在命令列中，以 python get-pip.py 安裝 pip 工具，完成後，以 pip list 確認 pip.exe 已經配置完成。</span></p>
+<p><span><em><strong>5.</strong></em> 最後在命令列中，以 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 網際內容管理系統啟動所需的 Python 模組後，此可攜系統中的 Python 3.13.2 套件已經可以用來維護個人作業倉儲與分組倉儲。</span></p>
+<p>之後利用新版的<span> </span><a href="https://www.scintilla.org/SciTEDownload.html">SciTE</a>，<a href="https://git-scm.com/downloads/win">Portablegit</a>，<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a>,<span> </span><a href="https://github.com/ShareX/ShareX/releases">ShareX</a>，<a href="https://www.debugmode.com/wink.html">Wink</a>，<a href="https://solvespace.com/download.pl">Solvespace</a>，<a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/zoomit">Zoomit</a>，<a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/process-explorer#download">ProcessExplorer</a><span> </span></p>
+<p>以及原有的 tmp 及 home_ipv6，將以新的 start_python313 啟動。</p>
+<p><span>python版本更新影片</span>：</p>
+<p></p>
+<p><em><strong></strong></em></p><h2>task2</h2>
+<p>1. 設定 Git 使用 PuTTY</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set GIT_SSH=Y:\putty\plink.exe
+</pre>
+<p>2. 用 PuTTYgen 產生金鑰</p>
+<p></p>
+<ul>
+<li class="" data-end="210" data-start="190">
+<p class="" data-end="210" data-start="193">開啟 <code data-end="210" data-start="196">puttygen.exe</code></p>
+</li>
+<li class="" data-end="234" data-start="211">
+<p class="" data-end="234" data-start="214">點【Generate】，移動滑鼠產生金鑰</p>
+</li>
+<li class="" data-end="293" data-start="235">
+<p class="" data-end="293" data-start="238">複製上方的 Public Key 到 GitHub &gt; Settings &gt; SSH and GPG keys</p>
+</li>
+<li class="" data-end="342" data-start="294">
+<p class="" data-end="342" data-start="297">點【Save private key】，儲存為 <code data-end="342" data-start="321">Y:\myprivatekey.ppk</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">3. 建立 SSH Session（mysession）</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="398" data-start="381">
+<p class="" data-end="398" data-start="384"><code data-end="342" data-start="321">開啟 <code data-end="398" data-start="387">putty.exe</code></code></p>
+</li>
+<li class="" data-end="427" data-start="399">
+<p class="" data-end="427" data-start="402"><code data-end="342" data-start="321">Host Name 輸入：<code data-end="427" data-start="415">github.com</code></code></p>
+</li>
+<li class="" data-end="463" data-start="428">
+<p class="" data-end="463" data-start="431"><code data-end="342" data-start="321">Session 名稱輸入：<code data-end="455" data-start="444">mysession</code>，點【Save】</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">4. 設定 Session 的私鑰</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="516" data-start="491">
+<p class="" data-end="516" data-start="494"><code data-end="342" data-start="321">在 PuTTY 載入 <code data-end="516" data-start="505">mysession</code></code></p>
+</li>
+<li class="" data-end="571" data-start="517">
+<p class="" data-end="571" data-start="520"><code data-end="342" data-start="321">左側：Connection &gt; SSH &gt; Auth，選擇 <code data-end="571" data-start="550">Y:\myprivatekey.ppk</code></code></p>
+</li>
+<li class="" data-end="594" data-start="572">
+<p class="" data-end="594" data-start="575"><code data-end="342" data-start="321">回到 Session 再次【Save】</code></p>
+</li>
+</ul>
+<p>5. 匯出 Session 設定（可攜使用）</p>
+<p></p>
+<ul>
+<li class="" data-end="647" data-start="627">
+<p class="" data-end="647" data-start="630"><code data-end="639" data-start="630">regedit</code> 打開登錄編輯器</p>
+</li>
+<li class="" data-end="685" data-start="648">
+<p class="" data-end="685" data-start="651">匯出 <code data-end="665" data-start="654">mysession</code> 設定為 <code data-end="685" data-start="670">mysession.reg</code></p>
+</li>
+</ul>
+<p><code data-end="685" data-start="670">6. 設定 Git 倉儲 URL</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*</pre>
+<p>最後完成推送：</p>
+<p><br/><br/></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><h2>task3</h2>
 <h2>task4</h2>
 <h2>task5</h2>
 <p><span style="background-color: #ff99cc;">1.請用繁體中文詳細說明下列資料: <a href="https://cyberbotics.com/doc/guide/introduction-to-webots" style="background-color: #ff99cc;">https://cyberbotics.com/doc/guide/introduction-to-webots </a></span></p>

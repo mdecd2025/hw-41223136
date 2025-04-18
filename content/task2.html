@@ -143,7 +143,77 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">task1 << <a href='task1.html'>Previous</a> <a href='task3.html'>Next</a> >> task3<br /><h1>task2</h1>
-<br />task1 << <a href='task1.html'>Previous</a> <a href='task3.html'>Next</a> >> task3</div>
+<p>1. 設定 Git 使用 PuTTY</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set GIT_SSH=Y:\putty\plink.exe
+</pre>
+<p>2. 用 PuTTYgen 產生金鑰</p>
+<p></p>
+<ul>
+<li class="" data-end="210" data-start="190">
+<p class="" data-end="210" data-start="193">開啟 <code data-end="210" data-start="196">puttygen.exe</code></p>
+</li>
+<li class="" data-end="234" data-start="211">
+<p class="" data-end="234" data-start="214">點【Generate】，移動滑鼠產生金鑰</p>
+</li>
+<li class="" data-end="293" data-start="235">
+<p class="" data-end="293" data-start="238">複製上方的 Public Key 到 GitHub &gt; Settings &gt; SSH and GPG keys</p>
+</li>
+<li class="" data-end="342" data-start="294">
+<p class="" data-end="342" data-start="297">點【Save private key】，儲存為 <code data-end="342" data-start="321">Y:\myprivatekey.ppk</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">3. 建立 SSH Session（mysession）</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="398" data-start="381">
+<p class="" data-end="398" data-start="384"><code data-end="342" data-start="321">開啟 <code data-end="398" data-start="387">putty.exe</code></code></p>
+</li>
+<li class="" data-end="427" data-start="399">
+<p class="" data-end="427" data-start="402"><code data-end="342" data-start="321">Host Name 輸入：<code data-end="427" data-start="415">github.com</code></code></p>
+</li>
+<li class="" data-end="463" data-start="428">
+<p class="" data-end="463" data-start="431"><code data-end="342" data-start="321">Session 名稱輸入：<code data-end="455" data-start="444">mysession</code>，點【Save】</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">4. 設定 Session 的私鑰</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="516" data-start="491">
+<p class="" data-end="516" data-start="494"><code data-end="342" data-start="321">在 PuTTY 載入 <code data-end="516" data-start="505">mysession</code></code></p>
+</li>
+<li class="" data-end="571" data-start="517">
+<p class="" data-end="571" data-start="520"><code data-end="342" data-start="321">左側：Connection &gt; SSH &gt; Auth，選擇 <code data-end="571" data-start="550">Y:\myprivatekey.ppk</code></code></p>
+</li>
+<li class="" data-end="594" data-start="572">
+<p class="" data-end="594" data-start="575"><code data-end="342" data-start="321">回到 Session 再次【Save】</code></p>
+</li>
+</ul>
+<p>5. 匯出 Session 設定（可攜使用）</p>
+<p></p>
+<ul>
+<li class="" data-end="647" data-start="627">
+<p class="" data-end="647" data-start="630"><code data-end="639" data-start="630">regedit</code> 打開登錄編輯器</p>
+</li>
+<li class="" data-end="685" data-start="648">
+<p class="" data-end="685" data-start="651">匯出 <code data-end="665" data-start="654">mysession</code> 設定為 <code data-end="685" data-start="670">mysession.reg</code></p>
+</li>
+</ul>
+<p><code data-end="685" data-start="670">6. 設定 Git 倉儲 URL</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*</pre>
+<p>最後完成推送：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">git push origin main</pre>
+<hr/>
+<p>過程影片：<br/><br/><br/></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><br />task1 << <a href='task1.html'>Previous</a> <a href='task3.html'>Next</a> >> task3</div>
         
     <!-- footer -->
       <div class="container">
