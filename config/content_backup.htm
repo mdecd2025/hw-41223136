@@ -73,7 +73,8 @@ for i in all_stud:
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">列出2a還未納入的學員名單</a></p><h2>w4</h2>
 <p>putty的使用方法、fossil的操作方式</p>
 <p>操作影片：</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RvTvscRWd-4?si=M8iT5VMr3e2QnhKJ" title="YouTube video player" width="560"></iframe></p><h2>w5</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RvTvscRWd-4?si=M8iT5VMr3e2QnhKJ" title="YouTube video player" width="560"></iframe></p>
+<p>fossil的操作過程可以到<a href="https://mde.tw/cd2025/content/Fossil.html">老師的頁面</a>觀看</p><h2>w5</h2>
 <p>webots的介紹和更改wscite資料夾和webots使用方式</p>
 <p></p>
 <h3>webots詳細說明</h3>
@@ -109,8 +110,15 @@ for i in all_stud:
 <li><span style="color: #ff0000;"><span style="color: #000000;">特權操作：與一般控制器不同，監督控制器擁有特權功能，包括模擬控制，如隨機移動機器人、錄製模擬影片等。</span></span><span style="color: #ff0000;"></span></li>
 </ol>
 <h2>w6</h2>
-<p>要啟動webots在可攜裡面輸入<span style="color: #000000; background-color: #ffff00;">webotsw</span>就可以開啟軟體，前提是要檔案內要<a href="/downloads/Webots_2025a_web.7z">Webots_2025a_web.7z</a>才可以開啟，並放在data頁面</p>
-<h2>w7</h2>
+<p>要啟動webots在可攜裡面輸入<span style="color: #000000; background-color: #ffff00;">webotsw</span>就可以開啟軟體，前提是要檔案內要<a href="/downloads/Webots_2025a_web.7z">Webots_2025a_web.7z</a>才可以開啟，並放在data頁面，如果是舊版可攜套件<span>也可在.bat啟動編碼中自行設定加入</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">REM for Webots
+set PYTHON_PATH=%Disk%:\Python313
+  
+REM for webots
+set  path_webots=%Disk%:\Webots_2025a\msys64\mingw64\bin;%Disk%:\Webots_2025a\msys64\usr\bin
+  
+path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;%path_flutter%;%path_node%;%path_tcc%;%path_postgresql%;%path_range%;%path_lua%;%path_core%;%path_putty%;%path_vscode%;%RUST_PATH%;%path_erlang%;%path_nodejs%;%path_haskell%;%path_scite%;%path_xsltproc%;%path_gnuplot%;%path_openssl%;%path_poppler%;%path_webots%;%path_blender%;%path%;</pre>
+<p><span style="background-color: #ccffcc;">在開啟webots時系統會有跳出警告防火牆，其中一定要選擇允許，否則防火牆會擋</span></p><h2>w7</h2>
 <p>因連假沒有上課，將當週的上課內容整理到此頁</p>
 <p>slvs檔案：<a href="/downloads/basket_ball_shooter.7z">basket_ball_shooter.7z</a></p>
 <p>繪製投球機零件影片：</p>
