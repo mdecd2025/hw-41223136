@@ -140,6 +140,7 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p>以下將要利用程式方法列出學員的作業倉儲與網頁連結, 以及各分組的倉儲及網站連結</p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲</a></p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a尚未加入的成員</a></p>
+<p><span>上列程式已經給出當時已經參與分組的學員 Github 帳號，因此只需要從 <a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a> 讀取學員的學號與 Github 帳號，並且在 <span style="background-color: #ffff99;">for 迴圈</span>中，逐一用學員的 Github 帳號<span style="background-color: #ffff99;">相對於各班已經參與分組的學員</span> Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可<span style="background-color: #ffff99;">列出截至當時尚未那組的學員學號</span>。</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
 url = "https://mde.tw/list/2a.txt"
 data = open(url).readlines()
@@ -163,6 +164,7 @@ for i in all_stud:
 <p>匯出之後在可攜輸入<span style="background-color: #ccffcc;"><span style="background-color: #ffffff;"><span>git clone --recurse-submodules mailto:git@(.ppk名稱):(倉儲帳號)/(倉儲分支名稱).git</span></span></span></p>
 <p><span style="background-color: #ccffcc;"><span style="background-color: #ffffff;"><span>再cms即可！</span></span></span></p>
 <p><span style="background-color: #ccffcc;"><span style="background-color: #ffffff;"><span></span></span></span></p><h2>task3</h2>
+<p>繪圖檔案：</p>
 <p>四連桿零件1~4繪圖過程：</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YyNbHHf3DFc?si=tOHYNOlCna9T6wMa" title="YouTube video player" width="560"></iframe></p>
 <p><span>四連桿零件5~7繪圖過程：</span></p>
