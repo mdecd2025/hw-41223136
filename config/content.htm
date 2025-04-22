@@ -136,7 +136,27 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><span>當指向一個 Solid 時，唯一的限制是 Solid 和 Joint 必須是某個共同上層 Solid 的下層。</span></p>
 <p>意思即是指 SolidReference 是一個引用類型，允許在 Joint 節點的 endPoint 欄位中指定某個目標。</p><h2>w9</h2>
 <p>本週統整先前所完成的內容，並拍成影片，自評期望成績並填寫表單。</p><h1>task</h1>
-<h2>task2</h2>
+<h2>task1</h2>
+<p>以下將要利用程式方法列出學員的作業倉儲與網頁連結, 以及各分組的倉儲及網站連結</p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a尚未加入的成員</a></p>
+<p><span>上列程式已經給出當時已經參與分組的學員 Github 帳號，因此只需要從 <a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a> 讀取學員的學號與 Github 帳號，並且在 <span style="background-color: #ffff99;">for 迴圈</span>中，逐一用學員的 Github 帳號<span style="background-color: #ffff99;">相對於各班已經參與分組的學員</span> Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可<span style="background-color: #ffff99;">列出截至當時尚未那組的學員學號</span>。</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
+url = "https://mde.tw/list/2a.txt"
+data = open(url).readlines()
+all_stud = data[1:]
+a_all_members = ['41223154', '41271125', '41271158', '41271146', '41271131', 'CYG41223103', '41223102', '41023128', '41023137', '41223137', '41223157', '41223156', 'otakuyoyo', '41223141', '41223113', 'kim41223114', 'joeisme1208', '41223116', '41223144', '41223140', '41223143', '41223138', '41223134', '41223136', 'zhe41223118', 'Spirit0224', 'yuhao-08', '41223158', 'Ren911308', '41223150', 'Manto8', 'CYA41223106', 'yan21ed', 'Lin41223107', '41223133', 'hong41223129', '41223110', '41223147', 'Linjiahong41223125', 'CHN41223132', 'Yu-Fang-Hong', '41023111', 'yckaooooo', 'kolas911205', '41023105', '40932134', '41223104', 'yan41223101', '41223105', '41223153', '41223120', '41223152', 'G8People', 'WSE41223112', '41223146', '41223119']
+   
+# 顯示甲班標題
+print("甲班:")
+for i in all_stud:
+    drop_n = i.rstrip("\n")
+    stud = drop_n.split("\t")
+    stud_num = stud[0]
+    stud_github = stud[1]
+    if stud_github not in a_all_members:
+        print(stud_num)</pre>
+<p></p><h2>task2</h2>
 <p>ssh協定執行作業倉儲的推送</p>
 <p>操作過程影片：</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RvTvscRWd-4?si=oqMB1I1rMzlI48FL" title="YouTube video player" width="560"></iframe></p>
