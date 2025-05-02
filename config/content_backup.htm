@@ -152,7 +152,17 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p>練習webots使用方法，<span>熟悉 Webots 的使用者介面與基本概念</span></p>
 <p>操作影片：</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5FbhDObpsww?si=O0_5g5aWuxyo3QCX" title="YouTube video player" width="560"></iframe></p>
-<h2>Tutorial2</h2><h1>task</h1>
+<h2>Tutorial2</h2>
+<p>引導課程2：修改環境</p>
+<ol>
+<li>學習修改地板：</li>
+</ol>
+<p>內定的 RectangleArena PROTO 定義了一個簡單的地板，固定在靜態環境中，沒有物理節點，四周則被牆壁包圍。Webots 物件庫中還有其他預製的地板。我們現在將刪除 RectangleArena 節點，並添加一個簡單的地板，在場景樹視圖當中選擇並展開Floor。<span style="background-color: #ffff00;">修改size字段其調整為1mx1m。</span></p>
+<p><span style="background-color: #ffffff;">       2.了解Solid節點的應用：</span></p>
+<p><span style="background-color: #ffffff;"><a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點代表剛體，即可以忽略變形的物體。剛體中任意兩點之間的距離無論外力如何作用，都保持恆定。例如桌子、機器人手指骨節或輪子都是剛體。軟體和關節物體不是剛體。例如繩子、輪胎、海綿或關節機器人手臂都不是剛體。然而，一個關節實體可以被分解成若干剛體。</span></p>
+<p><span style="background-color: #ffffff;">       3.DEF-USE機制：</span></p>
+<p><span style="background-color: #ffffff;">DEF-USE 機制允許在一個地方定義一個節點，並在場景樹的其他地方重用該定義。這對於避免在世界文件中重複相同的節點非常有用。此外，它還允許用戶同時修改多個對象。其工作原理如下：首先使用 DEF 字符串標記一個節點。然後可以使用 USE 關鍵字在其他地方重用該節點的副本。只有 DEF 節點的字段可以編輯，USE 節點的字段繼承自 DEF 節點，無法更改。此機制依賴於世界文件中節點的順序。DEF 節點應在任何相應的 USE 節點之前定義。</span></p>
+<p><span style="background-color: #ffffff;">以下是影片：</span></p><h1>task</h1>
 <h2>task1</h2>
 <p>以下將要利用程式方法列出學員的作業倉儲與網頁連結, 以及各分組的倉儲及網站連結</p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲</a></p>
