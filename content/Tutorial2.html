@@ -2,7 +2,7 @@
         <head>
         <title>cdproject</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,70 +142,20 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">task6 << <a href='task6.html'>Previous</a> <a href='Final.html'>Next</a> >> Final<br /><h1>list</h1>
-<p>網站：</p>
-<p>41223118：<a href="https://mdecd2025.github.io/hw-zhe41223118/">https://mdecd2025.github.io/hw-zhe41223118/</a></p>
-<p>41223122：<a href="https://mdecd2025.github.io/hw-Spirit0224/content/index.html">https://mdecd2025.github.io/hw-Spirit0224/</a></p>
-<p>41223131：<a href="https://mdecd2025.github.io/hw-yuhao-08/content/index.html">https://mdecd2025.github.io/hw-yuhao-08/</a></p>
-<p>41223134：<a href="https://mdecd2025.github.io/hw-41223134">https://mdecd2025.github.io/hw-41223134</a></p>
-<p>41223136：<a class="Link--inTextBlock" href="https://mdecd2025.github.io/hw-41223136/">https://mdecd2025.github.io/hw-41223136/</a></p>
-<p>41223158：<a href="https://mdecd2025.github.io/hw-41223158">https://mdecd2025.github.io/hw-41223158</a></p>
-<hr/>
-<p>倉儲：</p>
-<p>41223118：<a href="https://github.com/mdecd2025/hw-zhe41223118">https://github.com/mdecd2025/hw-zhe41223118</a></p>
-<p>41223122：<a href="https://github.com/mdecd2025/hw-Spirit0224/settings/pages">https://github.com/mdecd2025/hw-Spirit0224</a></p>
-<p>41223131：<a href="https://github.com/mdecd2025/hw-yuhao-08">https://github.com/mdecd2025/hw-yuhao-08</a></p>
-<p>41223134：<a href="https://github.com/mdecd2025/hw-41223134">https://github.com/mdecd2025/hw-41223134</a></p>
-<p>41223136：<a href="https://github.com/mdecd2025/hw-41223136">https://github.com/mdecd2025/hw-41223136</a> </p>
-<p>41223158：<a href="https://github.com/mdecd2025/hw-41223158">https://github.com/mdecd2025/hw-41223158</a></p>
-<hr/>
-<p>Brython-列出組員倉儲及網站<strong><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/090a231f6023298fe6c79d75c648919b/raw/fa0f0e27e983890ed8aad90e573017faa39c9f32/ag4-w1">連結</a></strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document, window
-  
-# 定義資料來源 URL
-url = "https://mde.tw/list/2a.txt"
-  
-# 定義要查找的學號列表
-target_ids = ["41223118", "41223122", "41223131", "41223134", "41223136", "41223158"]
-  
-# 顯示學員數量
-print("正在處理...")
-  
-# 取得 HTML 中的元素 id 為 "brython_div1"
-brython_div1 = document["brython_div1"]
-  
-# 使用 JavaScript 的 fetch API 來抓取資料
-def process_data(response_text):
-    # 將抓取到的資料分行
-    data = response_text.splitlines()
-  
-    # 跳過標題行，取得學員資料
-    all_stud = data[1:]
-  
-    # 逐行處理學員資料
-    for stud in all_stud:
-        # 假設學員資料的格式為 "學號 學員賬號"
-        student_info = stud.strip().split()  # 使用 split() 將每行分為學號和帳號
-        if len(student_info) == 2:  # 確保每行有學號和帳號
-            student_id = student_info[0].strip()  # 學號
-            student_account = student_info[1].strip()  # 學員賬號
-  
-            # 檢查學號是否在目標學號列表中
-            if student_id in target_ids:
-                # 創建 GitHub 和作業網站的超鏈接
-                github_link = f"https://github.com/mdecd2025/hw-{student_account}"
-                homework_link = f"https://mdecd2025.github.io/hw-{student_account}/"
-                  
-                # 顯示該學號的 GitHub 和作業網站
-                brython_div1 &lt;= html.A(student_id, href=github_link)  # 學號是 GitHub repo 連結
-                brython_div1 &lt;= " "  # 空格
-                brython_div1 &lt;= html.A("(repo)", href=homework_link)  # 作業網站的超鏈接標題為 (repo)
-                brython_div1 &lt;= html.BR()  # 換行
-  
-# 使用 JavaScript 的 fetch API 拉取資料
-window.fetch(url).then(lambda response: response.text()).then(process_data)
-</pre>
-<p></p><br />task6 << <a href='task6.html'>Previous</a> <a href='Final.html'>Next</a> >> Final</div>
+    <div id="tipue_search_content">Tutorial1 << <a href='Tutorial1.html'>Previous</a> <a href='task.html'>Next</a> >> task<br /><h1>Tutorial2</h1>
+<p><span>導引課程 2：修改環境</span></p>
+<ol>
+<li>學習修改地板：</li>
+</ol>
+<p>內定的 RectangleArena PROTO 定義了一個簡單的地板，固定在靜態環境中，沒有物理節點，四周則被牆壁包圍。Webots 物件庫中還有其他預製的地板。我們現在將刪除 RectangleArena 節點，並添加一個簡單的地板，在場景樹視圖當中選擇並展開Floor。<span>修改size字段其調整為1mx1m。</span></p>
+<p><span>       2.了解Solid節點的應用：</span></p>
+<p><span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>節點代表剛體，即可以忽略變形的物體。剛體中任意兩點之間的距離無論外力如何作用，都保持恆定。例如桌子、機器人手指骨節或輪子都是剛體。軟體和關節物體不是剛體。例如繩子、輪胎、海綿或關節機器人手臂都不是剛體。然而，一個關節實體可以被分解成若干剛體。</span></p>
+<p><span>       3.DEF-USE機制：</span></p>
+<p><span>DEF-USE 機制允許在一個地方定義一個節點，並在場景樹的其他地方重用該定義。這對於避免在世界文件中重複相同的節點非常有用。此外，它還允許用戶同時修改多個對象。其工作原理如下：首先使用 DEF 字符串標記一個節點。然後可以使用 USE 關鍵字在其他地方重用該節點的副本。只有 DEF 節點的字段可以編輯，USE 節點的字段繼承自 DEF 節點，無法更改。此機制依賴於世界文件中節點的順序。DEF 節點應在任何相應的 USE 節點之前定義。</span></p>
+<p><span>以下是影片：</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EoFxRAqJ5Sg?si=sp_Wd8pjIq6v9ryw" title="YouTube video player" width="560"></iframe></p>
+<p>因為後續軟體跳掉下面是後續結果：</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/daTUj9EMIR0?si=Eo3_QDpStIXlcjl7" title="YouTube video player" width="560"></iframe></p><br />Tutorial1 << <a href='Tutorial1.html'>Previous</a> <a href='task.html'>Next</a> >> task</div>
         
     <!-- footer -->
       <div class="container">
