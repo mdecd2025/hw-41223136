@@ -25,7 +25,20 @@
 <p><code><span>RectangleArena</span> </code><span>場景樹中的節點，打開節點並顯示其字段。 (雙點擊各節點可以帶出其特定的欄位)</span></p>
 <p><span><span><code>Add</code><span><span>按鈕。</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/add-button.png" width="26"/><span><span>在開啟的對話方塊中選擇 </span></span><span><code>PROTO nodes (Webots Projects) / objects / factory / containers / WoodenBox (Solid)</code></span><span><span>，競技場中央應該會出現一個大箱子</span></span></span></span></p>
 <p><span><span><span><span><span>選擇場景樹視圖的最後一個節點。按一下場景樹視圖頂部的</span><code>Add</code><span><span>按鈕，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/add-button.png" width="26"/><span><span>在對話框中選擇 </span></span><span><code>PROTO nodes (Webots Projects) / robots / gctronic / e-puck / E-puck (Robot)</code></span><span><span>，電子冰上曲棍球機器人會出現在競技場的中央，移動並旋轉這個機器人，就像移動和旋轉盒子一樣，儲存模擬並按下</span></span><code>Run real-time</code><span><span>按鈕</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/realtime-button.png" width="26"/></span></span></span></span></p>
-<h2><span><span><span><span>Tutorial2</span></span></span></span></h2><h1>task</h1>
+<h2>Tutorial2</h2>
+<p><span>導引課程 2：修改環境</span></p>
+<ol>
+<li>學習修改地板：</li>
+</ol>
+<p>內定的 RectangleArena PROTO 定義了一個簡單的地板，固定在靜態環境中，沒有物理節點，四周則被牆壁包圍。Webots 物件庫中還有其他預製的地板。我們現在將刪除 RectangleArena 節點，並添加一個簡單的地板，在場景樹視圖當中選擇並展開Floor。<span>修改size字段其調整為1mx1m。</span></p>
+<p><span>       2.了解Solid節點的應用：</span></p>
+<p><span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>節點代表剛體，即可以忽略變形的物體。剛體中任意兩點之間的距離無論外力如何作用，都保持恆定。例如桌子、機器人手指骨節或輪子都是剛體。軟體和關節物體不是剛體。例如繩子、輪胎、海綿或關節機器人手臂都不是剛體。然而，一個關節實體可以被分解成若干剛體。</span></p>
+<p><span>       3.DEF-USE機制：</span></p>
+<p><span>DEF-USE 機制允許在一個地方定義一個節點，並在場景樹的其他地方重用該定義。這對於避免在世界文件中重複相同的節點非常有用。此外，它還允許用戶同時修改多個對象。其工作原理如下：首先使用 DEF 字符串標記一個節點。然後可以使用 USE 關鍵字在其他地方重用該節點的副本。只有 DEF 節點的字段可以編輯，USE 節點的字段繼承自 DEF 節點，無法更改。此機制依賴於世界文件中節點的順序。DEF 節點應在任何相應的 USE 節點之前定義。</span></p>
+<p><span>以下是影片：</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EoFxRAqJ5Sg?si=sp_Wd8pjIq6v9ryw" title="YouTube video player" width="560"></iframe></p>
+<p>因為後續軟體跳掉下面是後續結果：</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/daTUj9EMIR0?si=Eo3_QDpStIXlcjl7" title="YouTube video player" width="560"></iframe></p><h1>task</h1>
 <p>每週任務相關內容整理如下：</p>
 <p>task1 與 task2 任務目的在建立可於近端維護個人作業與協同作業的準備工作：</p>
 <p>task1 (自行製作可攜程式系統)</p>
@@ -841,6 +854,7 @@ while robot.step(timestep) != -1:
 </ul>
 </li>
 </ol>
+<p></p><h1>Exam3</h1>
 <p></p><h1>list</h1>
 <p>網站：</p>
 <p>41223118：<a href="https://mdecd2025.github.io/hw-zhe41223118/">https://mdecd2025.github.io/hw-zhe41223118/</a></p>
