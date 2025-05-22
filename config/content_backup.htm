@@ -907,7 +907,8 @@ while robot.step(timestep) != -1:
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set WEBOTS_HOME=%Disk%:\Webots_2023b</pre>
 <p></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set PYTHONPATH=%Disk%:\Python313\DLLs;%Disk%:\Python313\Lib;%Disk%:\Python313\Lib\site-packages;%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;</pre>
-<p><br/><br/></p>
+<p><br/><span>以上條件皆具備後，以 <span style="background-color: #ffff99;">webotsw --stream</span> 啟動webots串流：</span></p>
+<p><span>啟動順序-先 Run simulation <span style="background-color: #ccffcc;">(暫停和歸零)</span>，執行 <span style="background-color: #ffff99;">server</span>，然後再執行 <span style="background-color: #ffff99;">client</span> 後進行控制</span></p>
 <p><span></span></p>
 <p><span></span></p>
 <p></p><h2>video</h2>
@@ -1223,7 +1224,7 @@ doc["aitetris"].bind("click", aitetris.do)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div2"></div>
-<!-- editor2 結束 --><hr>
+<!-- editor2 結束 --><hr/>
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p></hr>
+</p>
