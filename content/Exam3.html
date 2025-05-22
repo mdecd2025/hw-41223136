@@ -145,9 +145,24 @@ img.add_border {
     <div id="tipue_search_content">w3 << <a href='w3.html'>Previous</a> <a href='video.html'>Next</a> >> video<br /><h1>Exam3</h1>
 <p><span>由各組組員將所完成的影片與心得整理在個人作業網站中的此頁面後，再逐一利用組員的帳號權限，將個人心得與<a href="https://mdecd2025.github.io/hw-scrum-1/content/Exam3.html">Exam3</a> 完成影片，統一放入分組網站中的本頁面中</span></p>
 <p><span>組員應用檔案：</span></p>
-<p>防火牆設定：<a href="./../downloads/set_firewall_ports_1000_2000_8000_9000.7z">set_firewall_ports_1000_2000_8000_9000.7z</a></p>
-<p>Exam3-2 七段器webots模擬程式：<a href="./../downloads/three_digit_counter.7z">/downloads/three_digit_counter.7z</a></p>
-<br />w3 << <a href='w3.html'>Previous</a> <a href='video.html'>Next</a> >> video</div>
+<p><span>防火牆設定：<a href="./../downloads/set_firewall_ports_1000_2000_8000_9000.7z">set_firewall_ports_1000_2000_8000_9000.7z</a></span></p>
+<p><span>Exam3-2 七段器webots模擬程式：<a href="./../downloads/three_digit_counter.7z">/downloads/three_digit_counter.7z</a></span></p>
+<hr/>
+<p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EVHiE3UDjbhMuxhZHIptdWQBePd6wxOqVx-yIC_Ex731wg?e=bX9NBy">Exam3-1.7z</a> (HW1四連桿)</span></p>
+<p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/ETIlcOfH_ANPrYJV2ayVDAsBkouqZK0wLWBI2_66MSRrEQ?e=SSkeEP">Exam3-2.7z</a> (七段顯示器)</span></p>
+<p><span>可攜所需下載 python 程式庫：</span></p>
+<p><span><span style="background-color: #ffff00;">pip install keyboard</span> (鍵盤控制)</span></p>
+<p><span><span style="background-color: #ffff00;">pip install websocket-server</span> (伺服器)</span></p>
+<p><span><span style="background-color: #ffff00;">pip install websocket-client</span> (客戶端)</span></p>
+<p><span>在可攜的 <span style="background-color: #ffff99;">.bat</span> 啟動端內還需將 Webots 內建的動態連結程式庫納入：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set WEBOTS_HOME=%Disk%:\Webots_2023b</pre>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set PYTHONPATH=%Disk%:\Python313\DLLs;%Disk%:\Python313\Lib;%Disk%:\Python313\Lib\site-packages;%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;</pre>
+<p><br/><span>以上條件皆具備後，以 <span style="background-color: #ffff99;">webotsw --stream</span> 啟動webots串流：</span></p>
+<p><span>啟動順序-先 Run simulation <span style="background-color: #ccffcc;">(暫停和歸零)</span>，執行 <span style="background-color: #ffff99;">server</span>，然後再執行 <span style="background-color: #ffff99;">client</span> 後進行控制</span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p></p><br />w3 << <a href='w3.html'>Previous</a> <a href='video.html'>Next</a> >> video</div>
         
     <!-- footer -->
       <div class="container">
