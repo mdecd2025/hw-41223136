@@ -1,7 +1,14 @@
 <h1>About</h1>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p>課程名稱: 協同產品設計實習 - Collaborative Product Design Practice </p>
+<p>2a第四組網站：<a class="Link--inTextBlock" href="https://mdecd2025.github.io/2a-ag4/">https://mdecd2025.github.io/2a-ag4/</a></p>
+<p>2a or 2b 第幾組倉儲: 2a-第四組(<a href="https://github.com/mdecd2025/2a-ag4">ag4</a>)</p>
+<p>小組近端維護連結：<a href="/get_page/About/1">ag4_組長連結</a></p>
+=======
 <p>課程名稱: 協同產品設計實習 - Collaborative Product Design Practice</p>
 <p>學員作業網站:<a class="Link--inTextBlock" href="https://mdecd2025.github.io/hw-41223136/">https://mdecd2025.github.io/hw-41223136/</a></p>
 <p>學員作業倉儲:<a href="https://github.com/mdecd2025/hw-41223136">https://github.com/mdecd2025/hw-41223136</a>  </p>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 34cc45080483539fdd32ca8eefd0f4702521e659
 <hr/>
 <p>課程代號: cd2025</p>
 <p>Teams 線上教學:</p>
@@ -11,11 +18,176 @@
 <p>課程評分:</p>
 <p style="padding-left: 30px;">Homework (30%) - 每週至少提交兩次與課程進度有關的內容, 完成後填回自評表單</p>
 <p style="padding-left: 30px;">Exam (40%) - 建立包含操作流程影片、心得以及提供檔案下載的網頁後填回自評表單</p>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表單</p><h1>Tutorial</h1>
+<p><span>硬體需求:</span></p>
+<p><span>2 GHz 4 核心以上 CPU, NVIDIA 或 AMD 支援 OpenGL 3.3 版, 帶有 512 MB 記憶體以上獨立顯示卡</span></p>
+<p><span>操作系統：</span></p>
+<p>Windows 10 或 11 64 位元操作系統</p>
+<p>Ubuntu 24.04 以上版本</p>
+<p>macOS 12 以上版本操作系統</p>
+<p><span>介面：</span></p>
+<p><span>可以透過 Tools - Preferences - Language 中選擇使用 English <span style="background-color: #ccffcc;">(目前無繁體中文介面，介面語系翻譯請參考 <a href="https://github.com/cyberbotics/webots/tree/released/resources/translations" style="background-color: #ccffcc;">translations 頁面</a>說明)</span></span></p>
+<p><span>版本差異：</span></p>
+<p><span>每一版本都有些微差異，cd2025 將使用 <a href="https://github.com/cyberbotics/webots/releases/tag/R2025a">R2025a</a> (課程過程發現 Webots 2025a 有不少 bugs，其中包括操作過程閃退以及無法使用 Transform 節點，因此可以換為 <a href="http://229.cycu.org/Webots_2023b.7z">Webots_2023b.7z</a><span><span> </span>版</span>)</span></p>
+<p><span>原始碼使用授權：</span></p>
+<p>採<span> </span><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license agreement</a>. Apache 2.0 是一種開放且對企業友善的授權條款，允許任何人免費使用、修改和分享軟體的原始程式碼，包括商業用途使用</p>
+<p>自行編譯 Webots 請參考<span> </span><a href="https://cyberbotics.com/doc/guide/building-webots">building Webots 頁面</a>說明</p>
+<p>Webots 套件中的大部分範例模擬檔案都使用 Apache 2.0 許可釋出，但有部分機器人和物件模型<span style="background-color: #ccffcc;">（proto 檔案）</span>則是根據<span> </span><a href="https://cyberbotics.com/webots_assets_license">Webots 資產的開放原始碼許可協議</a>發佈，另外有些範例則是由用戶根據不同的開源許可證所提供，這些檔案都會明確標示其許可證內容</p>
+<p><span>Webots 大綱介紹：</span></p>
+<p><span>整理內容以在w2週時，經各組員分配後統整至網站的 <a href="https://mdecd2025.github.io/2a-ag4/content/task5.html">task5</a> 頁面 </span></p>
+<p>Webots 場景中包含以下定義：</p>
+<ol>
+<li>物件所在位置</li>
+<li>物件的外形</li>
+<li>物件如何互動</li>
+<li>天空的顏色</li>
+<li>地心引力的定義</li>
+<li>摩擦力</li>
+<li>物件的質量</li>
+<li>模擬的起始條件</li>
+<li>其他有關模擬的設定等</li>
+</ol>
+<h2>Tutorial1</h2>
+<h4 class="anchor-header" id="addanepuckrobot" name="add-an-e-puck-robot"><span>電子冰球機器人：</span></h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5FbhDObpsww?si=Gk0mGslNOJHGUyeC" title="YouTube video player" width="560"></iframe></p>
+<p><code><span>RectangleArena</span> </code><span>場景樹中的節點，打開節點並顯示其字段。 (雙點擊各節點可以帶出其特定的欄位)</span></p>
+<p><span><span><code>Add</code><span><span>按鈕。</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/add-button.png" width="26"/><span><span>在開啟的對話方塊中選擇 </span></span><span><code>PROTO nodes (Webots Projects) / objects / factory / containers / WoodenBox (Solid)</code></span><span><span>，競技場中央應該會出現一個大箱子</span></span></span></span></p>
+<p><span><span><span><span><span>選擇場景樹視圖的最後一個節點。按一下場景樹視圖頂部的</span><code>Add</code><span><span>按鈕，</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/add-button.png" width="26"/><span><span>在對話框中選擇 </span></span><span><code>PROTO nodes (Webots Projects) / robots / gctronic / e-puck / E-puck (Robot)</code></span><span><span>，電子冰上曲棍球機器人會出現在競技場的中央，移動並旋轉這個機器人，就像移動和旋轉盒子一樣，儲存模擬並按下</span></span><code>Run real-time</code><span><span>按鈕</span></span><img alt="" height="26" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/realtime-button.png" width="26"/></span></span></span></span></p>
+<h2>Tutorial2</h2>
+<p><span>導引課程 2：修改環境</span></p>
+<ol>
+<li>學習修改地板：</li>
+</ol>
+<p>內定的 RectangleArena PROTO 定義了一個簡單的地板，固定在靜態環境中，沒有物理節點，四周則被牆壁包圍。Webots 物件庫中還有其他預製的地板。我們現在將刪除 RectangleArena 節點，並添加一個簡單的地板，在場景樹視圖當中選擇並展開Floor。<span>修改size字段其調整為1mx1m。</span></p>
+<p><span>       2.了解Solid節點的應用：</span></p>
+<p><span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>節點代表剛體，即可以忽略變形的物體。剛體中任意兩點之間的距離無論外力如何作用，都保持恆定。例如桌子、機器人手指骨節或輪子都是剛體。軟體和關節物體不是剛體。例如繩子、輪胎、海綿或關節機器人手臂都不是剛體。然而，一個關節實體可以被分解成若干剛體。</span></p>
+<p><span>       3.DEF-USE機制：</span></p>
+<p><span>DEF-USE 機制允許在一個地方定義一個節點，並在場景樹的其他地方重用該定義。這對於避免在世界文件中重複相同的節點非常有用。此外，它還允許用戶同時修改多個對象。其工作原理如下：首先使用 DEF 字符串標記一個節點。然後可以使用 USE 關鍵字在其他地方重用該節點的副本。只有 DEF 節點的字段可以編輯，USE 節點的字段繼承自 DEF 節點，無法更改。此機制依賴於世界文件中節點的順序。DEF 節點應在任何相應的 USE 節點之前定義。</span></p>
+<p><span>以下是影片：</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EoFxRAqJ5Sg?si=sp_Wd8pjIq6v9ryw" title="YouTube video player" width="560"></iframe></p>
+<p>因為後續軟體跳掉下面是後續結果：</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/daTUj9EMIR0?si=Eo3_QDpStIXlcjl7" title="YouTube video player" width="560"></iframe></p>
+<h1>task</h1>
+<p>每週任務相關內容整理如下：</p>
+<p>task1 與 task2 任務目的在建立可於近端維護個人作業與協同作業的準備工作：</p>
+<p>task1 (自行製作可攜程式系統)</p>
+<p>task2 (使用 SSH 協定執行作業倉儲的推送)</p>
+<p>task3 與 task4 則為 HW2 的內容之一</p>
+<p>task3 (使用 Solvespace 建立平面四連桿系統零組件)</p>
+<p>task4 (使用 Onshape 建立平面四連桿系統零組件)</p>
+<p>task5 與 task6 則為 HW3 的主要內容</p>
+<p>task5 (Webots Tutorial 1 ~3)</p>
+<p>task6 (Webots Tutorial 4 ~6)</p>
+<h2>task1</h2>
+<p><span>利用既有的 Python 可攜系統建立各版本的 Python 可攜環境。</span></p>
+<p><span><em><strong>1. </strong></em>下載 <a href="http://229.cycu.org/portable_python311.7z">portable_python311.7z</a>，<span>一套尚未安裝 pip 的 Python 3.11 可攜程式環境。</span></span></p>
+<p><span><span><em><strong>2. </strong></em>目錄中的 start_ipv6.bat 啟動可攜系統，</span></span>接著修改 start_ipv6.bat，利用 Search - Replace，Find 欄位填上 Python311，Replace 欄位填上 Python313 後，按下 Replace All，便可將啟動檔中所有 Python311 設定改為 Python313，另存修改後的檔案為 start_python313.bat。</p>
+<p><em><strong>3. </strong></em><span>以 stop.bat 關閉 start_ipv6.bat 開啟的可攜系統，改以心建立的 start_python313.bat 開啟可攜環境，之後在命令列輸入 python，確認目前的 Python 版本為 3.13.2 後，利用 Ctrl + z 退出 Python 後，利用 pip list 確認目前的 Python 3.13.2 系統尚未配置 pip 模組管理工具。</span></p>
+<p><span><em><strong>4. </strong></em>在命令列中，以 python get-pip.py 安裝 pip 工具，完成後，以 pip list 確認 pip.exe 已經配置完成。</span></p>
+<p><span><em><strong>5.</strong></em> 最後在命令列中，以 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 網際內容管理系統啟動所需的 Python 模組後，此可攜系統中的 Python 3.13.2 套件已經可以用來維護個人作業倉儲與分組倉儲。</span></p>
+<p>之後利用新版的<span> </span><a href="https://www.scintilla.org/SciTEDownload.html">SciTE</a>，<a href="https://git-scm.com/downloads/win">Portablegit</a>，<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a>,<span> </span><a href="https://github.com/ShareX/ShareX/releases">ShareX</a>，<a href="https://www.debugmode.com/wink.html">Wink</a>，<a href="https://solvespace.com/download.pl">Solvespace</a>，<a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/zoomit">Zoomit</a>，<a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/process-explorer#download">ProcessExplorer</a><span> </span></p>
+<p>以及原有的 tmp 及 home_ipv6，將以新的 start_python313 啟動。</p>
+<p><span>python版本更新影片</span>：</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ys-K4rsSOB8" width="560"></iframe></p>
+<p><em><strong></strong></em>*此影片後半幾點未完成</p>
+<h2>task2</h2>
+<p>1. 設定 Git 使用 PuTTY</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set GIT_SSH=Y:\putty\plink.exe
+</pre>
+<p>2. 用 PuTTYgen 產生金鑰</p>
+<p></p>
+<ul>
+<li class="" data-end="210" data-start="190">
+<p class="" data-end="210" data-start="193">開啟 <code data-end="210" data-start="196">puttygen.exe</code></p>
+</li>
+<li class="" data-end="234" data-start="211">
+<p class="" data-end="234" data-start="214">點【Generate】，移動滑鼠產生金鑰</p>
+</li>
+<li class="" data-end="293" data-start="235">
+<p class="" data-end="293" data-start="238">複製上方的 Public Key 到 GitHub &gt; Settings &gt; SSH and GPG keys</p>
+</li>
+<li class="" data-end="342" data-start="294">
+<p class="" data-end="342" data-start="297">點【Save private key】，儲存為 <code data-end="342" data-start="321">Y:\myprivatekey.ppk</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">3. 建立 SSH Session（mysession）</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="398" data-start="381">
+<p class="" data-end="398" data-start="384"><code data-end="342" data-start="321">開啟 <code data-end="398" data-start="387">putty.exe</code></code></p>
+</li>
+<li class="" data-end="427" data-start="399">
+<p class="" data-end="427" data-start="402"><code data-end="342" data-start="321">Host Name 輸入：<code data-end="427" data-start="415">github.com</code></code></p>
+</li>
+<li class="" data-end="463" data-start="428">
+<p class="" data-end="463" data-start="431"><code data-end="342" data-start="321">Session 名稱輸入：<code data-end="455" data-start="444">mysession</code>，點【Save】</code></p>
+</li>
+</ul>
+<p><code data-end="342" data-start="321">4. 設定 Session 的私鑰</code></p>
+<p><code data-end="342" data-start="321"></code></p>
+<ul>
+<li class="" data-end="516" data-start="491">
+<p class="" data-end="516" data-start="494"><code data-end="342" data-start="321">在 PuTTY 載入 <code data-end="516" data-start="505">mysession</code></code></p>
+</li>
+<li class="" data-end="571" data-start="517">
+<p class="" data-end="571" data-start="520"><code data-end="342" data-start="321">左側：Connection &gt; SSH &gt; Auth，選擇 <code data-end="571" data-start="550">Y:\myprivatekey.ppk</code></code></p>
+</li>
+<li class="" data-end="594" data-start="572">
+<p class="" data-end="594" data-start="575"><code data-end="342" data-start="321">回到 Session 再次【Save】</code></p>
+</li>
+</ul>
+<p>5. 匯出 Session 設定（可攜使用）</p>
+<p></p>
+<ul>
+<li class="" data-end="647" data-start="627">
+<p class="" data-end="647" data-start="630"><code data-end="639" data-start="630">regedit</code> 打開登錄編輯器</p>
+</li>
+<li class="" data-end="685" data-start="648">
+<p class="" data-end="685" data-start="651">匯出 <code data-end="665" data-start="654">mysession</code> 設定為 <code data-end="685" data-start="670">mysession.reg</code></p>
+</li>
+</ul>
+<p><code data-end="685" data-start="670">6. 設定 Git 倉儲 URL</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "origin"]
+    url = git@mysession:用戶名/倉儲名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*</pre>
+<p>最後完成推送：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">git push origin main</pre>
+<hr/>
+<p>過程影片：<br/><br/><br/></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h2>task3</h2>
+<h4>使用 Solvespace 建立<span style="background-color: #ffff99;">平面四連桿</span>系統零組件：</h4>
+<p><a href="https://mdecd2025.github.io/hw-zhe41223118/content/task3.html">41223118</a> 下載檔案：<a href="https://nfuedu-my.sharepoint.com/my?id=%2Fpersonal%2F41223118%5Fnfu%5Fedu%5Ftw%2FDocuments%2F41223118%5Ffourbar%5Fslvs%2E7z&amp;parent=%2Fpersonal%2F41223118%5Fnfu%5Fedu%5Ftw%2FDocuments&amp;ga=1">41223118_fourbar_slvs.7z</a></p>
+<p>        <span>零件繪製影片：</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/VqGk_asNmDc?si=jzzE--wOt_k0dnmB" title="YouTube video player" width="560"></iframe></p>
+<hr/>
+<p>41223122 下載檔案：<a href="/downloads/41223122slvs.7z">/downloads/41223122slvs.7z</a></p>
+<p><span>          零件繪製影片：<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/MR1uKyb-428" width="560"></iframe></span></p>
+<hr/>
+<p><span>41223136</span></p>
+<p><span>下載檔案：<a href="/downloads/四連桿零件檔.7z">41223136_fourbar_slvs.7z</a></span></p>
+<p><span>1~4零件</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YyNbHHf3DFc?si=xqEnowNqeZYOCX7O" title="YouTube video player" width="560"></iframe></p>
+<p>5~7零件</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/zDujzSvNzk4?si=axiwySS6Hk5K5e3y" title="YouTube video player" width="560"></iframe></p>
+<p></p>
+<h2>task4</h2>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲連結</a></span></p>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b分組網站與倉儲連結</a></span></p>
+<p><span>上列程式已經給出兩班當時已經參與分組的學員 Github 帳號，因此只需要從 <a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 <span style="background-color: #ffff99;">for 迴圈</span>中，逐一用學員的 Github 帳號<span style="background-color: #ffff99;">相對於各班已經參與分組的學員</span> Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可<span style="background-color: #ffff99;">列出截至當時尚未那組的學員學號</span>。</span></span></p>
+=======
 <p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表單</p>
 <h1>上課內容</h1>
-<p></p>
 <h2>w1</h2>
-<p>利用python版本更新影片：</p>
+<p>利用python版本更新影片：.</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/L3-NBNPjddI?si=YDwYlNCQDX_5gpn9" title="YouTube video player" width="560"></iframe></p>
 <p>匯出組員倉儲及網站影片：</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_AFkinvxJjM?si=NXi2DO7WvNBbhtCG" title="YouTube video player" width="560"></iframe></p>
@@ -52,9 +224,9 @@ brython_div1 &lt;= html.BR()
 brython_div1 &lt;= "6. " + html.A("41223136", href="https://mdecd2025.github.io/hw-41223136/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223136")
 brython_div1 &lt;= html.BR()
 brython_div1 &lt;= "7. " + html.A("41223158", href="https://mdecd2025.github.io/hw-41223158/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223158")
-</pre>
-<h2>w3</h2>
+</pre><h2>w3</h2>
 <p>列出各班未納入分組名單的名單</p>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 34cc45080483539fdd32ca8eefd0f4702521e659
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
 url = "https://mde.tw/list/2a.txt"
 data = open(url).readlines()
@@ -70,6 +242,11 @@ for i in all_stud:
     stud_github = stud[1]
     if stud_github not in a_all_members:
         print(stud_num)</pre>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
+<h2>task5</h2>
+<p><span style="background-color: #ff99cc;">1.請用繁體中文詳細說明下列資料: <a href="https://cyberbotics.com/doc/guide/introduction-to-webots" style="background-color: #ff99cc;">https://cyberbotics.com/doc/guide/introduction-to-webots </a></span></p>
+=======
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">列出2a還未納入的學員名單</a></p>
 <h2>w4</h2>
 <p>putty的使用方法、fossil的操作方式</p>
@@ -84,6 +261,7 @@ for i in all_stud:
 <p>webots的介紹和更改wscite資料夾和webots使用方式</p>
 <p></p>
 <h3>webots詳細說明</h3>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 34cc45080483539fdd32ca8eefd0f4702521e659
 <p>Q1：什麼是Webots?</p>
 <p>Webots是一款專業的移動機器人模擬軟件，提供了3D虛擬環境，支持物理屬性設計，並且可創建不同類型的機器人(輪式、腿式、飛行)，並添加傳感器和執行器。支持單獨編程機器人以實現特定行為，提供大量模型和示例。模擬成功後，可以將程序轉移至真實的機器人，支持擴展新接口。</p>
 <p>Q2：我可以用Webots做什麼?</p>
@@ -93,8 +271,13 @@ for i in all_stud:
 <p>競賽：可用於機器人比賽。</p>
 <p><span>Q3：要使用Webots，我需要知道什麼?</span></p>
 <ol>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<li>程式語言知識 ：需具備<span>C、C++、Java、Python或MATLAB</span>的基本知識來撰寫機器人控制器。若不熟悉語言可使用<span>簡單圖形化程式語言BotStudio編程</span>(適用於e-puck和Hemisson機器人)</li>
+<li>3D模型創建：需了解<span>3D電腦圖形</span>和<span>VRML97</span>描述語言。</li>
+=======
 <li>程式語言知識 ：需具備<span style="color: #ff0000;">C、C++、Java、Python或MATLAB</span>的基本知識來撰寫機器人控制器。若不熟悉語言可使用<span style="color: #ff0000;">簡單圖形化程式語言BotStudio編程</span>(適用於e-puck和Hemisson機器人)</li>
 <li>3D模型創建：需了解<span style="color: #ff0000;">3D電腦圖形</span>和<span style="color: #ff0000;">VRML97</span>描述語言。</li>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 34cc45080483539fdd32ca8eefd0f4702521e659
 </ol>
 <p>Q4：什麼是世界?</p>
 <ul>
@@ -109,6 +292,1002 @@ for i in all_stud:
 <li>運行機制：模擬開始時，Webots為每個機器人啟動獨立的控制進程，多個機器人可共用同一程式碼，但每個機器人有獨立進程。</li>
 <li>儲存位置：控制器檔案儲存在專案的"controllers"子目錄</li>
 </ol>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p>這是Webots中控制器的<span>核心概念</span>，<span>強調其獨立性與語言支援的多樣性</span>。</p>
+<p>Q6：什麼是監督控制器?</p>
+<ol>
+<li>監督控制器定義：當機器人的<span>supervisor欄位設為TURE<span>，控制器成為監督控制器。能執行人類操作員的任務，而非真實機器人能完成的動作。</span><span></span></span></li>
+<li><span><span>特權操作：與一般控制器不同，監督控制器擁有特權功能，包括模擬控制，如隨機移動機器人、錄製模擬影片等。</span></span></li>
+</ol>
+<p><span style="background-color: #ff99cc;">2.請整理網頁中重要的英文單字與用法, 並且針對其中所使用的英文文法逐句說明.</span></p>
+<ol data-end="1116" data-start="38">
+<li data-end="175" data-start="38">
+<p data-end="77" data-start="41"><strong data-end="68" data-start="41">Mobile robot simulation</strong>（移動機器人模擬）</p>
+<strong data-end="89" data-start="83">差異</strong>：英文中的「simulation」指的是在虛擬環境中模擬機器人行為，而中文「模擬」同樣表示模仿，但在某些語境下，可能沒有英文「simulation」那麼強烈的虛擬環境暗示。</li>
+<li data-end="282" data-start="177">
+<p data-end="209" data-start="180"><strong data-end="201" data-start="180">Rapid prototyping</strong>（快速原型設計）</p>
+<strong data-end="221" data-start="215">差異</strong>：英文「prototyping」具體指「製作原型」這個過程，而中文「原型設計」更偏向結果導向，較少強調「製作過程」的含義。</li>
+<li data-end="396" data-start="284">
+<p data-end="315" data-start="287"><strong data-end="309" data-start="287">Physics properties</strong>（物理屬性）</p>
+<strong data-end="327" data-start="321">差異</strong>：英文「properties」除了「屬性」，也可以指物理環境中的具體特徵和參數，而中文的「屬性」更多強調事物的性質，而不一定包含具體數值。</li>
+<li data-end="542" data-start="398">
+<p data-end="429" data-start="401"><strong data-end="423" data-start="401">Locomotion schemes</strong>（移動方式）</p>
+<strong data-end="441" data-start="435">差異</strong>：英文「locomotion」特指機器人或動物的移動方式，包括步行、飛行等具體方式；而中文「移動」泛指動作，涵蓋範圍更廣泛。英文「schemes」強調設計、計劃的結構，但中文「方式」沒有強烈的規劃意味。</li>
+<li data-end="637" data-start="544">
+<p data-end="575" data-start="547"><strong data-end="569" data-start="547">Controller program</strong>（控制程式）</p>
+<strong data-end="587" data-start="581">差異</strong>：英文「controller」強調設備或程式的控制功能，而中文「控制」可能更多指行為，而非具體裝置。</li>
+<li data-end="740" data-start="639">
+<p data-end="665" data-start="642"><strong data-end="658" data-start="642">Robot models</strong>（機器人模型）</p>
+<strong data-end="677" data-start="671">差異</strong>：英文「model」不僅指模型，還可以包含系統設計的概念，而中文「模型」更偏向於外形或結構，缺乏英文中「概念模型」的深層意義。</li>
+<li data-end="848" data-start="742">
+<p data-end="773" data-start="745"><strong data-end="767" data-start="745">Swarm intelligence</strong>（群體智能）</p>
+<strong data-end="785" data-start="779">差異</strong>：英文「swarm」特指動物或機器人的群體行動，並且有合作與集體行為的含義，而中文「群體」也可指單純的個體聚集，未必強調合作。</li>
+<li data-end="961" data-start="850">
+<p data-end="880" data-start="853"><strong data-end="874" data-start="853">Genetic algorithm</strong>（遺傳算法）</p>
+<strong data-end="892" data-start="886">差異</strong>：英文「genetic」在此術語中引用遺傳學理論，而中文「遺傳」通常與生物學相關，在技術環境下可能需要具體說明該算法如何模仿生物遺傳過程。</li>
+<li data-end="1072" data-start="963">
+<p data-end="991" data-start="966"><strong data-end="985" data-start="966">Neural networks</strong>（神經網絡）</p>
+<strong data-end="1003" data-start="997">差異</strong>：英文中的「neural」源於生物神經系統，並引申至機器學習模型，而中文「神經」更多指生物概念，除非在明確的技術背景下才會引申至計算領域。</li>
+<li data-end="1116" data-start="1074">
+<p data-end="1116" data-start="1078"><strong data-end="1110" data-start="1078">Artificial intelligence (AI)</strong>（人工智能）</p>
+<strong data-end="1128" data-start="1122">差異</strong>：英文「artificial intelligence」是技術術語，指模擬人類智能的系統，中文「人工智能」直接翻譯，但中文的「人工」有時強調「人為」製造，可能略有不同的語感。</li>
+</ol>
+<ol data-end="1255" data-start="1217" start="11">
+<li data-end="1255" data-start="1217"><strong data-end="1246" data-start="1221">Supervisor controller</strong>（監督者控制程式）<strong data-end="1267" data-start="1261">差異</strong>：英文「supervisor」在此指具有高級管理功能的控制器，而中文「監督者」更多強調「人」的角色，控制程式翻譯時可能會弱化其技術層面的管理權限含義。</li>
+</ol>
+<ol data-end="1380" data-start="1344" start="12">
+<li data-end="1380" data-start="1344"><strong data-end="1372" data-start="1348">Multi-agent research</strong>（多智能體研究）<strong data-end="1392" data-start="1386">差異</strong>：英文「agent」具備自主行為或決策功能，中文「智能體」強調的是智能或行動個體，但「體」的翻譯可能較模糊，沒有完全涵蓋英文中「agent」的主動性和自決性。</li>
+</ol>
+<ol data-end="1505" data-start="1473" start="13">
+<li data-end="1505" data-start="1473"><strong data-end="1499" data-start="1477">Simulation control</strong>（模擬控制）<strong data-end="1517" data-start="1511">差異</strong>：英文「simulation」強調在虛擬或模擬環境中的控制，而中文「模擬控制」雖然意義相同，但「模擬」一詞在某些語境下會與「模仿」混淆。</li>
+</ol>
+<ol data-end="1621" data-start="1587" start="14">
+<li data-end="1621" data-start="1587"><strong data-end="1612" data-start="1591">3D virtual worlds</strong>（3D 虛擬世界）<strong data-end="1633" data-start="1627">差異</strong>：英文「virtual worlds」通常指的是由電腦生成的虛擬環境，而中文「虛擬世界」在非技術環境中也可能指非現實的想像世界，因此技術語境中需要強調其數位屬性。</li>
+</ol>
+<p><span style="background-color: #ff99cc;">3.請摘要出下列內容: (放入英文文章內容)</span></p>
+<div>
+<ul>
+<li class="break-words"><strong>What is Webots?</strong><br/> Webots is a professional mobile robot simulation software that provides a rapid prototyping environment. It allows users to create 3D virtual worlds with physics properties (e.g., mass, joints, friction) and add passive or active objects like mobile robots. Users can equip robots with sensors and actuators and program them for desired behaviors. It offers numerous robot models, examples, and interfaces to transfer simulations to real robots like e-puck or Nao.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What can I do with Webots?</strong><br/> Webots is ideal for research and education in mobile robotics, supporting projects like robot prototyping (e.g., academic, automotive, toy industries), locomotion research (legged, humanoid robots), multi-agent studies (swarm intelligence, collaborative robots), and adaptive behavior research (genetic algorithms, AI). It’s also used for teaching robotics and robot competitions.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What do I need to know to use Webots?</strong><br/> Basic knowledge of C, C++, Java, Python, or MATLAB is required to program controllers, though beginners can use the graphical BotStudio language for certain robots (e.g., e-puck). To create custom models or environments, familiarity with 3D graphics and VRML97 is needed for designing or importing 3D objects.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>How do I get User Support?</strong><br/> Cyberbotics offers paid support via Premier Service plans and custom development. Community-based support is available through Robotics StackExchange (webots tag), GitHub Discussions (development questions), GitHub Issues (bug reports), and Discord (quick discussions), though responses aren’t guaranteed.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>Webots Simulation</strong><br/> A Webots simulation consists of a world file (.wbt) defining robots and their environment, controller programs (in C/C++/Java/Python/MATLAB), and an optional physics plugin (in C/C++) to adjust physics behavior. World files may rely on external PROTO files and textures.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a World?</strong><br/> A "world" in Webots is a 3D description of robots and their environment, detailing properties like position, geometry, appearance, and physics. Organized hierarchically (like VRML97), world files (.wbt) specify controller names but don’t include the controller code itself.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a Controller?</strong><br/> A controller is a program that directs a robot in a world file, written in C, C++, Java, Python, or MATLAB. Webots launches each controller as a separate process per robot at simulation start. Some languages require compilation (e.g., C/C++), others interpretation (e.g., Python), with files stored in the "controllers" subdirectory.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a Supervisor Controller?</strong><br/> A supervisor controller, tied to a robot with its "supervisor" field set to TRUE, can perform privileged actions (e.g., simulation control, moving robots, recording videos) typically reserved for human operators. Written in any supported language, it has greater capabilities than standard controllers.</li>
+</ul>
+</div>
+<p><span style="background-color: #ff99cc;">4.請列出上述文章中的重要的英文單字與解釋, 以及出現在文句中的用法:</span></p>
+<ul>
+<li data-sourcepos="3:1-6:53"><strong>Simulation</strong>（模擬）：
+<ul data-sourcepos="4:5-6:53">
+<li data-sourcepos="4:5-4:27">解釋：使用模型來模仿真實系統或過程的行為。</li>
+<li data-sourcepos="5:5-5:71">用法：Webots is a professional mobile robot <strong>simulation</strong> software.</li>
+<li data-sourcepos="6:5-6:53">Webots <strong>simulation</strong> consists of a world file.</li>
+</ul>
+</li>
+<li data-sourcepos="7:1-10:72"><strong>Prototyping</strong>（原型製作）：
+<ul data-sourcepos="8:5-10:72">
+<li data-sourcepos="8:5-8:28">解釋：快速建立一個初步模型，用於測試或演示。</li>
+<li data-sourcepos="9:5-9:54">用法：provides a rapid <strong>prototyping</strong> environment.</li>
+<li data-sourcepos="10:5-10:72">robot <strong>prototyping</strong> (e.g., academic, automotive, toy industries)</li>
+</ul>
+</li>
+<li data-sourcepos="11:1-13:102"><strong>Actuators</strong>（致動器）：
+<ul data-sourcepos="12:5-13:102">
+<li data-sourcepos="12:5-12:33">解釋：將信號轉換為機械運動的裝置，用於控制機器或系統。</li>
+<li data-sourcepos="13:5-13:102">用法：Users can equip robots with sensors and <strong>actuators</strong> and program them for desired behaviors.</li>
+</ul>
+</li>
+<li data-sourcepos="14:1-16:102"><strong>Sensors</strong>（感測器）：
+<ul data-sourcepos="15:5-16:102">
+<li data-sourcepos="15:5-15:27">解釋：偵測環境變化並將其轉換為信號的裝置。</li>
+<li data-sourcepos="16:5-16:102">用法：Users can equip robots with <strong>sensors</strong> and actuators and program them for desired behaviors.</li>
+</ul>
+</li>
+<li data-sourcepos="17:1-19:55"><strong>Locomotion</strong>（運動）：
+<ul data-sourcepos="18:5-19:55">
+<li data-sourcepos="18:5-18:23">解釋：生物或機器移動的能力或方式。</li>
+<li data-sourcepos="19:5-19:55">用法：locomotion research (legged, humanoid robots).</li>
+</ul>
+</li>
+<li data-sourcepos="20:1-22:72"><strong>Multi-agent</strong>（多智能體）：
+<ul data-sourcepos="21:5-22:72">
+<li data-sourcepos="21:5-21:31">解釋：由多個自主實體組成的系統，它們可以相互交互。</li>
+<li data-sourcepos="22:5-22:72">用法：multi-agent studies (swarm intelligence, collaborative robots).</li>
+</ul>
+</li>
+<li data-sourcepos="23:1-25:61"><strong>Adaptive behavior</strong>（適應性行為）：
+<ul data-sourcepos="24:5-25:61">
+<li data-sourcepos="24:5-24:26">解釋：系統根據環境變化調整其行為的能力。</li>
+<li data-sourcepos="25:5-25:61">用法：adaptive behavior research (genetic algorithms, AI).</li>
+</ul>
+</li>
+<li data-sourcepos="26:1-29:73"><strong>Controller</strong>（控制器）：
+<ul data-sourcepos="27:5-29:73">
+<li data-sourcepos="27:5-27:22">解釋：控制系統行為的程式或裝置。</li>
+<li data-sourcepos="28:5-28:99">用法：Basic knowledge of C, C++, Java, Python, or MATLAB is required to program <strong>controllers</strong>.</li>
+<li data-sourcepos="29:5-29:73">A <strong>controller</strong> is a program that directs a robot in a world file.</li>
+</ul>
+</li>
+<li data-sourcepos="30:1-32:64"><strong>Graphical</strong>（圖形的）：
+<ul data-sourcepos="31:5-32:64">
+<li data-sourcepos="31:5-31:22">解釋：使用圖像或視覺元素表示的。</li>
+<li data-sourcepos="32:5-32:64">用法：beginners can use the <strong>graphical</strong> BotStudio language.</li>
+</ul>
+</li>
+<li data-sourcepos="33:1-35:62"><strong>Virtual</strong>（虛擬的）：
+<ul data-sourcepos="34:5-35:62">
+<li data-sourcepos="34:5-34:23">解釋：模擬或模仿真實環境或物件的。</li>
+<li data-sourcepos="35:5-35:62">用法：create 3D <strong>virtual</strong> worlds with physics properties.</li>
+</ul>
+</li>
+<li data-sourcepos="36:1-38:62"><strong>Physics</strong>（物理學）：
+<ul data-sourcepos="37:5-38:62">
+<li data-sourcepos="37:5-37:26">解釋：研究物質、能量及其相互作用的科學。</li>
+<li data-sourcepos="38:5-38:62">用法：create 3D virtual worlds with <strong>physics</strong> properties.</li>
+</ul>
+</li>
+<li data-sourcepos="39:1-41:82"><strong>Plugin</strong>（外掛程式）：
+<ul data-sourcepos="40:5-41:82">
+<li data-sourcepos="40:5-40:21">解釋：增加軟體功能的程式模組。</li>
+<li data-sourcepos="41:5-41:82">用法：and an optional <strong>physics</strong> plugin (in C/C++) to adjust physics behavior.</li>
+</ul>
+</li>
+<li data-sourcepos="42:1-45:123"><strong>Supervisor</strong>（管理者）：
+<ul data-sourcepos="43:5-45:123">
+<li data-sourcepos="43:5-43:30">解釋：具有特殊權限的控制器，用於監控和控制模擬。</li>
+<li data-sourcepos="44:5-44:45">用法：What is a <strong>Supervisor</strong> Controller?</li>
+<li data-sourcepos="45:5-45:123">A <strong>supervisor</strong> controller, tied to a robot with its "supervisor" field set to TRUE, can perform privileged actions.</li>
+</ul>
+</li>
+</ul>
+<p><span style="background-color: #ff99cc;">5.請詳細說明如何採手動方式在 Webots 建立下列場景:</span></p>
+<h4><span style="background-color: #00ffff;">步驟 1：創建新世界</span></h4>
+<ol>
+<li>
+<p><strong>啟動 Webots</strong>：</p>
+<ul>
+<li>打開 Webots 軟體，並進入主介面。</li>
+</ul>
+</li>
+<li>
+<p><strong>創建新世界</strong>：</p>
+<ul>
+<li>在 Webots 的主畫面中，選擇 <code inline="">File</code> &gt; <code inline="">New World</code>，這會創建一個名為 <code inline="">untitled.wbt</code> 的新世界。</li>
+<li>新創建的世界會有一個預設的地面，並且已經設定了一些基本參數。</li>
+</ul>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 2：設置桌面結構</span></h4>
+<ol>
+<li>
+<p><strong>新增桌子（Solid）</strong>：</p>
+<ul>
+<li>在 <code inline="">Scene Tree</code> 中，右鍵點選 <code inline="">WorldInfo</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Solid</code>，會在場景中新增一個 <code inline="">Solid</code> 節點。這個 <code inline="">Solid</code> 節點將代表你的桌子。</li>
+</ul>
+</li>
+<li>
+<p><strong>新增桌面的形狀（Shape）</strong>：</p>
+<ul>
+<li>在 <code inline="">Solid</code> 節點下，右鍵點選 <code inline="">Solid</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Shape</code> &gt; <code inline="">Box</code>。這將創建一個長方體來代表桌面。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定桌子尺寸</strong>：</p>
+<ul>
+<li>點選 <code inline="">Box</code> 節點，然後在右側的屬性面板中設定 <code inline="">size</code> 參數來調整桌子的大小。假設我們的桌子尺寸是 2 米長，1 米寬，0.1 米高，設定如下：</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">size 2 0.1 1</pre>
+</li>
+<li>
+<p><strong>設置桌子的顏色</strong>：</p>
+<ul>
+<li>點選 <code inline="">Solid</code> 節點，右鍵選擇 <code inline="">Appearance</code>，然後設定材質的顏色。你可以選擇木色或其他顏色來模擬桌子表面。</li>
+</ul>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 3：創建籃球框</span></h4>
+<ol>
+<li>
+<p><strong>新增籃框（Solid）</strong>：</p>
+<ul>
+<li>在 <code inline="">Scene Tree</code> 中，右鍵點選 <code inline="">WorldInfo</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Solid</code>，再右鍵選擇新創建的 <code inline="">Solid</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Shape</code> &gt; <code inline="">Cylinder</code>。這將創建一個圓柱形的籃框。</li>
+</ul>
+</li>
+<li>
+<p><strong>設置籃框的大小與位置</strong>：</p>
+<ul>
+<li>點選 <code inline="">Cylinder</code> 節點，並在右側屬性面板中設定 <code inline="">radius</code> 和 <code inline="">height</code>。例如：</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">radius 0.2
+height 0.05</pre>
+<ul>
+<li>設定 <code inline="">translation</code> 來調整籃框的位置。假設我們要把籃框放置在桌面上方，並放置在桌子的遠端。設定如下：</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">translation 0 0.6 -0.5</pre>
+<p>這樣，籃框就會位於桌子的上方，距離桌面的高度為 0.6 米。</p>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 4：創建籃球</span></h4>
+<ol>
+<li>
+<p><strong>新增籃球（Solid）</strong>：</p>
+<ul>
+<li>在 <code inline="">Scene Tree</code> 中，右鍵點選 <code inline="">WorldInfo</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Solid</code>，然後右鍵選擇新創建的 <code inline="">Solid</code> 節點，選擇 <code inline="">Add</code> &gt; <code inline="">Shape</code> &gt; <code inline="">Sphere</code>。這將創建一個球形的籃球。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定籃球大小與顏色</strong>：</p>
+<ul>
+<li>點選 <code inline="">Sphere</code> 節點，在右側屬性面板中設定 <code inline="">radius</code>，例如將 <code inline="">radius</code> 設定為 0.1 米，代表籃球的直徑為 20 公分。</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">radius 0.1</pre>
+<ul>
+<li>設定顏色，為了讓籃球看起來像真實的籃球，可以選擇橙色。這樣籃球就會顯示為橙色。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定籃球的位置</strong>：</p>
+<ul>
+<li>設定 <code inline="">translation</code>，將籃球放置於桌面上方，距離桌面大約 0.2 米。</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">translation 0 0.2 -0.5</pre>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 5：設置物理屬性</span></h4>
+<ol>
+<li>
+<h4><strong>設定桌子與籃框的物理屬性</strong>：</h4>
+<ul>
+<li>
+<h4>桌子和籃框不需要太多的彈性，但需要摩擦力，這樣物體才能有真實的接觸效果。</h4>
+</li>
+</ul>
+<h4>在 <code inline="">Solid</code> 節點中添加物理屬性設定：</h4>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Physics { 
+        density 1.0 
+        friction 0.9 
+        bounce 0.0 # 桌子和籃框不會反彈 
+}</pre>
+<h4><br/><br/></h4>
+</li>
+<li>
+<p><strong>設定籃球的物理屬性</strong>：</p>
+<ul>
+<li>籃球需要較高的彈性，以便它能夠反彈。可以設置以下屬性：</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Physics {
+    density 0.5
+    friction 0.3
+    bounce 0.7  # 籃球有較高的反彈
+}</pre>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 6：創建控制器</span></h4>
+<ol>
+<li>
+<h4><strong>創建 Python 控制器程式</strong>：</h4>
+<ul>
+<li>
+<h4>在 Webots 中，你需要使用控制器來控制物體的行為，例如投籃等。創建一個新的 Python 控制器，並將其命名為 <code inline="">basketball_controller.py</code>。</h4>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>編寫控制器邏輯</strong>：</p>
+<ul>
+<li>控制器的主要目的是監控籃球的運動，並在籃球進入籃框時進行計分。下面是一個簡單的範例程式，會檢查籃球是否進入籃框範圍。</li>
+<li>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">範例程式碼：
+
+from controller import Robot
+
+# 創建 robot 物件來控制 Webots 模擬
+robot = Robot()
+timestep = int(robot.getBasicTimeStep())
+
+# 獲取籃球的物體
+ball = robot.getFromDef("BASKETBALL")
+ball_position = ball.getPosition()
+
+# 模擬循環
+while robot.step(timestep) != -1:
+    # 更新籃球的位置
+    ball_position = ball.getPosition()
+
+    # 如果籃球進入籃框範圍，則顯示得分訊息
+    if ball_position[0] &gt; 0.5 and ball_position[0] &lt; 1.5 and ball_position[1] &gt; 0.5:
+        print("得分！")</pre>
+</li>
+</ul>
+<p></p>
+</li>
+<li>
+<p><strong>連接控制器與世界</strong>：</p>
+<ul>
+<li>在 Webots 中，點選 <code inline="">WorldInfo</code> 節點，在屬性面板中找到 <code inline="">controller</code> 屬性，並將其設置為剛創建的控制器程式名稱 <code inline="">basketball_controller.py</code>。</li>
+</ul>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 7：測試與調整</span></h4>
+<ol>
+<li>
+<p><strong>啟動模擬</strong>：</p>
+<ul>
+<li>點選 Webots 上方的 <code inline="">Play</code> 按鈕來啟動模擬。</li>
+<li>你應該可以看到籃球在桌子上彈跳，並且控制器會檢測籃球是否進入籃框並顯示得分。</li>
+</ul>
+</li>
+<li>
+<p><strong>調整參數</strong>：</p>
+<ul>
+<li>如果籃球的反彈效果或運動不符合預期，可以調整物理屬性（例如彈性、摩擦力、質量）來改善模擬效果。</li>
+</ul>
+</li>
+</ol>
+<h4><span style="background-color: #00ffff;">步驟 8：保存與分享</span></h4>
+<ol>
+<li>
+<p><strong>保存世界檔案</strong>：</p>
+<ul>
+<li>在 Webots 中，選擇 <code inline="">File</code> &gt; <code inline="">Save</code> 來保存你的 <code inline="">.wbt</code> 檔案。</li>
+</ul>
+</li>
+<li>
+<p><strong>分享模擬</strong>：</p>
+<ul>
+<li>你可以將 <code inline="">.wbt</code> 檔案和控制器程式（例如 <code inline="">basketball_controller.py</code>）一起分享，讓其他人可以使用這個模擬。</li>
+</ul>
+</li>
+</ol>
+<p><span style="background-color: #ff99cc;"><em><strong>6.</strong></em>希望可以手把手一步步說明該如何利用圖形介面 menu 建立這個場景, 過程中有那些要點必須特別注意?</span></p>
+<div>
+<div><strong>步驟 1</strong>：<strong>啟動 Webots 並創建新世界：</strong></div>
+</div>
+<div>
+<div>開啟 Webots 後，點擊菜單欄的「File」&gt;「New World」<span><span>(Ctrl+N)-(</span></span>創建一個空白的仿真世界，檔案副檔名為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">.wbt)</span></div>
+<div>
+<div><span><strong>要點</strong>：儲存時選擇一個容易找到的路徑，避免後續找不到檔案。</span></div>
+<div>
+<div><strong>步驊 2</strong>：添加桌面（地面）</div>
+</div>
+</div>
+<div>
+<div>     1.在場景樹（Scene Tree，左側）中，右鍵點擊頂層節點（預設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">WorldInfo</span>），選擇「Add Node」</div>
+<div>     2.在節點選擇視窗中，展開「PROTO nodes (Webots Projects)」&gt;「objects」&gt;「floors」</div>
+</div>
+<div>     3.選擇<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RectangleArena</span>，點擊「Add」</div>
+<div>     4.在場景樹中點擊<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RectangleArena</span>，右側屬性面板調整：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (a.)size</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0.5</span>（長 1m，寬 0.5m，模擬桌面大小）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (b.)translation</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 0</span>（放在原點）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (c.)appearance</span>：點擊後選擇<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">PBRAppearance</span>，設置<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span><span> </span>為木頭色（如<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.6 0.3 0.1</span>）</div>
+<div>
+<div><span><strong>要點</strong>：確保地面有<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span><span> </span>節點（預設已有），以啟用物理互動</span></div>
+<div>
+<div><strong>步驟 3</strong>：添加籃框</div>
+<div>
+<div>     1.在場景樹中右鍵，選擇「Add Node」</div>
+<div>
+<div>     2.選擇<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Base nodes</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span></div>
+<div>
+<div>     3.為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span><span> </span>添加子節點：</div>
+<div>
+<div>            (a.)右鍵<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span>，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span></div>
+<div>
+<div>            (b.)右鍵<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span>，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cylinder</span></div>
+<div>
+<div>            (c.)調整<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cylinder</span><span> </span>屬性：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I) radius</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.1</span>（籃框半徑 10cm）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                   (II) height</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.02</span>（籃框厚度 2cm）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                  (III) subdivision</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">32</span>（圓滑度）</div>
+</div>
+</div>
+</div>
+<div>
+<div>     4.在<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span><span> </span>下添加<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Appearance</span>，設為紅色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0 0</span>）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.4 0 0.3</span>（桌面邊緣後方，高度 30cm）</div>
+<div>
+<div>     5.添加物理屬性：</div>
+<div>
+<div>            (a.)右鍵<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span>，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span>（確保固定不動）</div>
+<div>
+<div><span><strong>要點</strong>：籃框應為靜態物體，避免被球撞動</span></div>
+<div>
+<div><strong>步驟 4</strong>：添加籃網（簡化版）</div>
+<div>
+<div>
+<div>     1.在<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span><span> </span>下右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span></div>
+<div>
+<div>     2.添加<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cone</span>，模擬籃網：</div>
+<div>            (a.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">bottomRadius</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.1</span>（與籃框相同）</div>
+</div>
+<div>            (b.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">height</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.15</span>（網長 15cm）</div>
+<div>            (c.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">side</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">TRUE</span>，<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">bottom</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">FALSE</span>（空心錐形）</div>
+<div>     3.調整位置：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 -0.075</span>（錐形從籃框向下延伸）</div>
+</div>
+<div>     4.設置外觀：</div>
+<div>            (a.)添加<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Appearance</span>，<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span><span> </span>設為白色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 1 1</span>），<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">transparency</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5</span>（半透明網狀感）</div>
+</div>
+<div><span><strong>要點</strong>：這裡簡化為錐形，實際網狀結構需更複雜的建模，若有需求可後續調整</span></div>
+</div>
+<div>
+<div><strong>步驟 5</strong>：添加籃球</div>
+<div>     1.在場景樹頂層右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Basketball</span></div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn"><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">     2.</span></span>添加子節點：</div>
+<div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)Shape</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Sphere</span>：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)radius</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.03</span>（直徑約 6cm，小型籃球）</div>
+</div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)Appearance</span>：設為橙色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0.5 0</span>）</div>
+</div>
+<div><span><strong>要點</strong>：確保球有物理屬性，且位置不與桌面重疊，否則可能卡住</span></div>
+</div>
+<div>
+<div><strong>步驟 6</strong>：添加投籃機制（簡化為槓桿）
+<div>     1.在場景樹頂層右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span>
+<div>     2.添加子節點：</div>
+<div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)Shape</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Box</span>：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)size</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.2 0.05 0.01</span>（長 20cm，寬 5cm，厚 1cm）</div>
+</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)Appearance</span>：設為灰色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5 0.5 0.5</span>）</div>
+</div>
+     3.添加物理屬性：</div>
+<div>
+<div>            (a.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span><span> </span>&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">mass</span><span> </span>設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.2</span></div>
+<div>     4.添加鉸鏈關節（模擬槓桿旋轉）：</div>
+<div>
+<div>
+<div>            (a.)在場景樹頂層右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span></div>
+<div>
+<div>            (b.)在<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span><span> </span>的<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">device</span><span> </span>中添加<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RotationalMotor</span>，命名為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">LauncherMotor</span></div>
+<div>
+<div>            (c.)設置<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">jointParameters</span></div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn"><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)</span></span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">anchor</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">-0.4 0 0</span>（鉸鏈固定在桌面前端）</div>
+<div>                   (II)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">axis</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 1 0</span>（沿 Y 軸旋轉）</div>
+<div>            (d.)將<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span><span> </span>拖入<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span><span> </span>的<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">endPoint</span><span> </span>欄位</div>
+</div>
+</div>
+</div>
+<div>     5.調整<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span><span> </span>位置：
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">-0.3 0 0.005</span>（與桌面接觸）</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div><span><strong>要點</strong>：確保槓桿與球初始位置對齊，後續需編寫控制器讓其旋轉</span></div>
+</div>
+<div>
+<div><strong>步驟 7</strong>：設置光源與背景</div>
+<div>
+<div>     1.添加光源：</div>
+<div>
+<div>            (a.)場景樹右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">PointLight</span></div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)location</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 1</span>（桌面上方 1m）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (c.)intensity</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1</span></div>
+</div>
+</div>
+</div>
+<div>
+<div>     2.添加背景：</div>
+<div><span><span>            (a.)</span></span>場景樹右鍵，選擇「Add Node」&gt;<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Background</span></div>
+<div><span><span>            (b.)</span></span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">skyColor</span>：設為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5 0.5 1</span>（淺藍色天空）</div>
+<div>
+<div><span><strong>要點</strong>：光源位置影響陰影效果，確保場景明亮可見</span></div>
+</div>
+</div>
+</div>
+<div>
+<div><strong>步驟 8</strong>：保存與測試</div>
+<div>
+<div>     1.點擊「File」&gt;「Save World」</div>
+<div>     2.按工具欄「Play」按鈕運行仿真</div>
+<div>     3.觀察：</div>
+<div>
+<div>            (a.)球是否會因重力落在槓桿上</div>
+<div>
+<div>            (b.)籃框是否穩定</div>
+</div>
+<div><span><strong>要點</strong>：若球卡住或場景異常，檢查物體的<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">translation</span><span> </span>是否重疊</span></div>
+<div><hr/><span></span></div>
+<div>
+<div><strong>特別注意的要點</strong></div>
+<div>
+<div>
+<ul>
+<li class="break-words"><strong>物理屬性</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">每個動態物體（如球、槓桿）必須有<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span><span> </span>節點，否則不會受重力影響。</li>
+<li class="break-words">靜態物體（如籃框）也需<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span>，但質量設為 0 或不設值。</li>
+</ul>
+</li>
+<li class="break-words"><strong>位置精確性</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">避免物體初始位置重疊，否則可能導致仿真崩潰或物體彈飛。</li>
+<li class="break-words">使用屬性面板輸入精確數值，而非僅靠 3D 視圖拖曳。</li>
+</ul>
+</li>
+<li class="break-words"><strong>關節與控制器</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">投籃槓桿需要控制器（Controller）驅動<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RotationalMotor</span>，這部分需額外編寫程式碼（例如用 Python 或 C）。</li>
+<li class="break-words">測試時可手動調整槓桿角度（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">position</span>），模擬投籃動作。</li>
+</ul>
+</li>
+<li class="break-words"><strong>比例與單位</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">Webots 使用公尺作為單位，確保所有尺寸（如籃球半徑、桌面大小）符合現實比例。</li>
+</ul>
+</li>
+<li class="break-words"><strong>性能優化</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">避免添加過多複雜節點（如高細分網格），以免仿真變慢。</li>
+</ul>
+</li>
+</ul>
+<div><strong>後續建議</strong></div>
+<div>
+<div>
+<ul>
+<li class="break-words"><strong>控制器編寫</strong>：為<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">LauncherMotor</span><span> </span>添加一個簡單控制器，讓槓桿按鍵觸發旋轉，模擬投籃。</li>
+<li class="break-words"><strong>計分系統</strong>：添加<span> </span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">TouchSensor</span><span> </span>到籃框，檢測球是否進籃。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2>task6</h2>
+<h4>Webots Tutorial (HW3)</h4>
+<p>1. 啟動 Webots 串流模式：</p>
+<p>   使用以下指令開啟 Webots 並啟用串流伺服器：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">webotsw --stream
+</pre>
+<p>2.   <strong data-end="163" data-start="154">預設埠號：</strong> <code data-end="170" data-start="164">1234</code><br data-end="173" data-start="170"/>     使用瀏覽器連線至：</p>
+<ul>
+<li class="" data-end="222" data-start="191">
+<p class="" data-end="222" data-start="193">本地端：<code data-end="220" data-start="197"><a href="http://localhost:1234">http://localhost:1234</a> <span style="background-color: #ccffcc;">(預設)</span></code></p>
+</li>
+<li class="" data-end="263" data-start="226">
+<p class="" data-end="263" data-start="228">遠端機器：<code data-end="263" data-start="233"><a href="http://stream_server_ip:1234">http://stream_server_ip:1234</a> <span style="background-color: #ccffcc;">(個人IP)</span></code></p>
+</li>
+</ul>
+<p><code data-end="263" data-start="233">3. <strong data-end="278" data-start="268">建議瀏覽器：</strong><br data-end="281" data-start="278"/><strong data-end="306" data-start="284">    Windows 環境下使用 Edge</strong>，相容性較佳（支援 WebGL2）</code></p>
+<p><code data-end="263" data-start="233">4. </code>顯示投籃成績（Scoreboard / 計時器）</p>
+<h4 class="" data-end="374" data-start="364"> a. 近端檢視：</h4>
+<ul data-end="442" data-start="375">
+<li class="" data-end="404" data-start="375">
+<p class="" data-end="404" data-start="377">利用 Webots <code data-end="396" data-start="387">display</code> 元件展示數字。</p>
+</li>
+<li class="" data-end="442" data-start="405">
+<p class="" data-end="442" data-start="407"><strong data-end="414" data-start="407">限制：</strong> 僅在本機 Webots 視窗中可見，無法透過串流顯示。</p>
+</li>
+</ul>
+<h4 class="" data-end="464" data-start="444"> b. 串流顯示（7 段顯示器實作）：</h4>
+<ol data-end="795" data-start="465" style="list-style-type: lower-roman;">
+<li class="" data-end="528" data-start="465">
+<p class="" data-end="528" data-start="468"><strong data-end="477" data-start="468">建模工具：</strong> 使用 Solvespace 繪製的 7 段顯示器模型（檔案：<code data-end="526" data-start="508">score_counter.7z</code>）。</p>
+</li>
+<li class="" data-end="625" data-start="530">
+<p class="" data-end="542" data-start="533"><strong data-end="542" data-start="533">匯入模型：</strong></p>
+<ul data-end="625" data-start="546">
+<li class="" data-end="590" data-start="546">
+<p class="" data-end="590" data-start="548">在 Webots 中插入一個 <code data-end="570" data-start="563">Solid</code> → <code data-end="580" data-start="573">Shape</code> → <code data-end="589" data-start="583">Mesh</code>。</p>
+</li>
+<li class="" data-end="625" data-start="594">
+<p class="" data-end="625" data-start="596"><code data-end="601" data-start="596">url</code> 指向各段（a ~ g）的 <code data-end="621" data-start="615">.obj</code> 檔案。</p>
+</li>
+</ul>
+</li>
+<li class="" data-end="728" data-start="627">
+<p class="" data-end="641" data-start="630"><strong data-end="641" data-start="630">變色顯示數字：</strong></p>
+<ul data-end="728" data-start="645">
+<li class="" data-end="697" data-start="645">
+<p class="" data-end="697" data-start="647">使用 <strong data-end="667" data-start="650">controller 程式</strong> 來變更 Mesh 段的顏色（開：紅色／亮；關：灰色／暗）。</p>
+</li>
+<li class="" data-end="728" data-start="701">
+<p class="" data-end="728" data-start="703">每個數字由不同段（a-g）組成，模擬數字顯示效果。</p>
+</li>
+</ul>
+</li>
+<li class="" data-end="795" data-start="730">
+<p class="" data-end="754" data-start="733"><strong data-end="754" data-start="733">使用 Supervisor 模式：</strong></p>
+<ul data-end="795" data-start="758">
+<li class="" data-end="795" data-start="758">
+<p class="" data-end="795" data-start="760">可程式化操控每個 Mesh 的外觀（顏色控制、數字變換、倒數計時等）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<p>其結果七段顯示數字顯示內容與Exam3-2相似，可以參考<a href="https://mdecd2025.github.io/hw-zhe41223118/content/Exam3.html">這個頁面</a>或下載 <a href="https://nfuedu-my.sharepoint.com/my?id=%2Fpersonal%2F41223118%5Fnfu%5Fedu%5Ftw%2FDocuments%2F41223118%2DExam3%2D2%2E7z&amp;parent=%2Fpersonal%2F41223118%5Fnfu%5Fedu%5Ftw%2FDocuments&amp;ga=1">Exam3-2.7z</a> 。</p><h1>w3</h1>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/cc01ceeb1328d3ca09231db4e385daf4/raw/13b83d97bd735b1b9dcd6f93f2dc68a6d4cb20d4/2a">2a 學員作業網站與倉儲連結</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/50fa97a66e26df9d3463b1c504c96234/raw/3bdd5163a21d450d08bc09ff83d68395cd2b60ac/2b">2b 學員作業網站與倉儲連結</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a 分組網站與倉儲連結</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b 分組網站與倉儲連結</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fc5cf16eb8c5e621f5398db4ad300f10/raw/88bc893395eae2d9080e2cd12ef1d88b371708b7/2b-1">2b未加入團隊學員</a></p>
+<h1>Exam3</h1>
+<p><span><span style="background-color: #ff99cc;">快速瀏覽</span>：</span></p>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/3-1%20video.html">Exam3-1</a>：</span></p>
+<p><span>                <a href="https://www.youtube.com/watch?v=7FDH348GOeQ">41223118</a>、41223122、41223131、41223134、41223136、41223158</span></p>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/3-2%20video.html">Exam3-2</a>：</span></p>
+<p><span>                <a href="https://www.youtube.com/watch?v=ZkwTBmQlgzo">41223118</a>、41223122、41223131、41223134、41223136、41223158</span></p>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/3-3%20video.html">Exam3-3</a>：</span></p>
+<p><span>                <a href="https://www.youtube.com/watch?v=icS0fJOZO1c">41223118</a>、41223122、41223131、41223134、41223136、41223158</span></p>
+<p><span></span><a href="https://mdecd2025.github.io/2a-ag4/content/reflections.html">reflections</a>：</p>
+<p><span>                <a href="https://mdecd2025.github.io/hw-zhe41223118/content/Exam3.html">41223118</a>、<a href="https://mdecd2025.github.io/hw-Spirit0224/content/Exam3.html">41223122</a>、<a href="https://mdecd2025.github.io/hw-yuhao-08/content/Exam3.html">41223131</a>、<a href="https://mdecd2025.github.io/hw-41223134/content/Exam3.html">41223134</a>、<a href="https://mdecd2025.github.io/hw-41223136/content/Exam3.html">41223136</a>、<a href="https://mdecd2025.github.io/hw-41223158/content/Exam3.html">41223158</a></span></p>
+<hr/>
+<p><span>由各組組員將所完成的影片與心得整理在個人作業網站中的此頁面後，再逐一利用組員的帳號權限，將個人心得與<a href="https://mdecd2025.github.io/hw-scrum-1/content/Exam3.html">Exam3</a> 完成影片，統一放入分組網站中的本頁面中</span></p>
+<p><span>組員應用檔案：</span></p>
+<p><span>防火牆設定：<a href="/downloads/set_firewall_ports_1000_2000_8000_9000.7z">set_firewall_ports_1000_2000_8000_9000.7z</a></span></p>
+<p><span>Exam3-2 七段器webots模擬程式：<a href="/downloads/three_digit_counter.7z">/downloads/three_digit_counter.7z</a></span></p>
+<hr/>
+<p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EVHiE3UDjbhMuxhZHIptdWQBePd6wxOqVx-yIC_Ex731wg?e=bX9NBy">Exam3-1.7z</a> (HW1四連桿)</span></p>
+<p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/ETIlcOfH_ANPrYJV2ayVDAsBkouqZK0wLWBI2_66MSRrEQ?e=SSkeEP">Exam3-2.7z</a> (七段顯示器)</span></p>
+<p><span>可攜所需下載 python 程式庫：</span></p>
+<p><span><span style="background-color: #ffff00;">pip install keyboard</span> (鍵盤控制)</span></p>
+<p><span><span style="background-color: #ffff00;">pip install websocket-server</span> (伺服器)</span></p>
+<p><span><span style="background-color: #ffff00;">pip install websocket-client</span> (客戶端)</span></p>
+<p><span>在可攜的 <span style="background-color: #ffff99;">.bat</span> 啟動端內還需將 Webots 內建的動態連結程式庫納入：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set WEBOTS_HOME=%Disk%:\Webots_2023b</pre>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set PYTHONPATH=%Disk%:\Python313\DLLs;%Disk%:\Python313\Lib;%Disk%:\Python313\Lib\site-packages;%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;</pre>
+<p><br/><span>以上條件皆具備後，以 <span style="background-color: #ffff99;">webotsw --stream</span> 啟動webots串流：</span></p>
+<p><span>啟動順序-先 Run simulation <span style="background-color: #ccffcc;">(暫停和歸零)</span>，執行 <span style="background-color: #ffff99;">server</span>，然後再執行 <span style="background-color: #ffff99;">client</span> 後進行控制</span></p>
+<hr/>
+<p>如不想手動新增，請於網站<a href="https://mdecd2025.github.io/hw-scrum-1/content/Since%20w10.html">w10週</a>下載最新版可攜程式，又或者clone下方.bat程式內容</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_ipv6
+set HomeDrive=%Disk%:\home_ipv6
+set Home=%Disk%:\home_ipv6
+set USERPROFILE=%Disk%:\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Disk%:\Python313\DLLs;%Disk%:\Python313\Lib;%Disk%:\Python313\Lib\site-packages;%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;
+set PYTHONHOME=%Disk%:\Python313
+REM for Webots
+set PYTHON_PATH=%Disk%:\Python313
+set WEBOTS_HOME=%Disk%:\Webots_2023b
+
+REM for putty
+set GIT_SSH=%Disk%:\PuTTY\plink.exe
+
+REM for Java and Android SDK
+set java_home=%Disk%:\java\jdk8u222-b10
+set ANDROID_SDK_home=%Disk%:\home_ipv6
+set GRADLE_USER_home=%Disk%:\home_ipv6
+set ANDROID_SDK_ROOT=%Disk%:\android\sdk
+set ANDROID_Home=%Disk%:\android\sdk
+set REPO_OS_OVERRIDE=windows
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Disk%:\Python313;%Disk%:\Python313\Scripts;
+REM 設定跟Git 有關的命令搜尋路徑
+set path_git=%Disk%:\portablegit\bin;
+REM 設定 msys2 64 位元的執行路徑
+REM %Disk%:\msys64\mingw64\bin is for GD library
+set path_msys2=%Disk%:\msys64\ucrt64\bin;%Disk%:\msys64\mingw64\bin;
+REM set for LaTeX
+set path_miketex=%Disk%:\miktex-portable\texmfs\install\miktex\bin\x64;
+REM Flutter path
+set path_flutter=%Disk%:\flutter\bin;%java_home%\bin;%Disk%:\Android\sdk;%Disk%:\Android\sdk\tools;%Disk%:\Android\sdk\tools\bin;%Disk%:\Android\sdk\emulator;%Disk%:\Android\sdk\platform-tools;%Disk%:\flutter\bin\cache\dart-sdk\bin;%Disk%:\vscode;
+set path_node=%Disk%:\node-v14.15.4-win-x64;
+
+set path_postgresql=%Disk%:\postgresql13\bin;
+set path_range=%Disk%:\Range3_official\bin;
+rem set path_range=%Disk%:\range-3.2.5_kmol\bin;
+set path_lua=%Disk%:\lua-5.3.5\;
+set path_core=%Disk%:\coreutils-5.3.0\bin;
+REM for gogs
+set path_putty=%Disk%:\PuTTY;
+set path_vscode=%Disk%:\vscode;
+
+REM for Rust
+set MINGW_PATH=%path_msys2%;
+set GIT_PATH=%path_git%;
+set VSCODE_PATH=%path_vscode%
+set RUSTUP_HOME=%Disk%:\Rust\rust
+set CARGO_HOME=%Disk%:\Rust\cargo
+set RUST_PATH=%CARGO_HOME%\bin
+
+REM for Erlang and Elixir
+set path_erlang=%Disk%:\elixir\erl10.7\bin\;%Disk%:\elixir\erl10.7\erts-10.7\bin;%Disk%:\elixir\elixir\bin;
+set ERTSPATH=%Disk%:\elixir\erl10.7\erts-10.7\bin
+set ERLINI=%Disk%:\elixir\erl10.7\erts-10.7\bin\erl.ini
+
+REM for Haskell
+set path_haskell=%Disk%:\ghc-9.0.1-x86_64-unknown-mingw32\bin;
+REM for node.js
+set path_nodejs=%Disk%:\node-v14.17.2-x64\nodejs;%Disk%:\node-v14.17.2-x64\nodejs\node_modules\npm;
+
+REM 加入 PostgreSQL 所需的環境變數設定
+
+@SET PGDATA=%Disk%:\postgresql13\data
+@SET PGDATABASE=postgres
+@SET PGUSER=postgres
+@SET PGPORT=5432
+@SET PGLOCALEDIR=%Disk%:\postgresql13\share\locale
+
+REM for Range3
+REM REG IMPORT %Disk%:\range3.reg
+
+REM proxy needed for heroku login
+REM proxy can not use with fossil scm
+REM proxy can not use with Rust installation
+REM needed for node.js
+REM set HTTP_PROXY=http://[2001:288:6004:xx::42]:3128
+REM set HTTPS_PROXY=http://[2001:288:6004:xx::42]:3128
+
+REM for PyRep
+set VREP_PATH=%Disk%:\CoppeliaSim
+
+REM BOOST_ROOT for compiling coppeliasim but maybe not for linking
+REM set BOOST_ROOT=%Disk%:\boost_1_76_0\;
+set path_copsim=%Disk%:\boost_1_76_0\;%Disk%:\Strawberry\perl\bin;%Disk%:\cmake-3.21.0-windows-x86_64\bin;%Disk%:\diffutils-2.8.7-1\bin;%Disk%:\patch-2.5.9-7\bin;%D%:\jom_1_1_2;%Disk%:\LLVM\bin;%Disk%:\QtCreator\bin;%Disk%:\CoppeliaSimEdu;%Disk%:\Python313\tcl\tcl8.6;
+
+REM for CMake
+set CMAKE_C_COMPILER=%Disk%:\msys64\ucrt64\bin\gcc;
+set CMAKE_CXX_COMPILER=%Disk%:\msys64\ucrt64\bin\g++;
+
+REM set QT_QPA_PLATFORM_PLUGIN_PATH=Y:\msys64_20240507\mingw64\share\qt5\plugins\platforms
+REM set QT_PLUGIN_PATH=Y:\msys64_20240507\mingw64\share\qt5\plugins
+
+REM for execute scite directly
+set path_scite=%Disk%:\wscite\;
+
+REM for simExtZMQ
+set path_xsltproc=%Disk%:\xsltproc;
+
+REM for OpenSSL
+Set OPENSSL_CONF=%Disk%:\OpenSSL-Win64\SSL\openssl.cnf
+set path_openssl=%Disk%:\OpenSSL-Win64\bin;
+
+REM for textract
+set path_poppler=%Disk%:\poppler-24.07.0\Library\bin;
+
+REM for tiny C compiler
+set path_tcc=%Disk%:\tcc;
+
+REM for webots
+set  path_webots=%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\msys64\usr\bin
+
+REM for blender
+set path_blender=%Disk%:\Blender 4.2;
+
+path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;%path_flutter%;%path_node%;%path_tcc%;%path_postgresql%;%path_range%;%path_lua%;%path_core%;%path_putty%;%path_vscode%;%RUST_PATH%;%path_erlang%;%path_nodejs%;%path_haskell%;%path_scite%;%path_xsltproc%;%path_gnuplot%;%path_openssl%;%path_poppler%;%path_webots%;%path_blender%;%path%;
+
+REM for NX2312, must after path setup 
+set SPLM_LICENSE_SERVER=29000@your_server
+set UGII_LANG=english
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_BASE_DIR=%Disk%:\NX\
+set UGII_TMP_DIR=%Disk%:\NX\temp
+set UGII_LIB_PATH=%Disk%:\NX\NXBIN\python
+set ugii=%Disk%:\NX\ugii;%Disk%:\NX\nxbin;
+path = %ugii%;%path%
+REM Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y
+
+REM start ugraf -nx
+
+REM python %Disk%:\tmp\nx_ex\new_part.py
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wscite\SciTE.exe
+start /MIN %Disk%:\wscite\SciTE.exe
+
+REM start webotsw.exe
+
+
+Exit
+</pre>
+<p><span><br/></span></p>
+<p></p><h2>3-1 video</h2>
+<p><em><strong>Exam3-1</strong></em></p>
+<p><span style="background-color: #ffcc99;">41223118<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7FDH348GOeQ?si=1knkIfo3JBXwrO7E" title="YouTube video player" width="560"></iframe></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223122<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223131<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223134<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223136<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223158<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p><h2>3-2 video</h2>
+<p><em><strong>Exam3-2</strong></em></p>
+<p><span style="background-color: #ffcc99;">41223118<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZkwTBmQlgzo?si=BWmpMlfIA_zXlixH" title="YouTube video player" width="560"></iframe></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223122<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223131<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223134<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223136<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223158<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p><h2>3-3 video</h2>
+<p><em><strong>Exam3-3</strong></em></p>
+<p><span style="background-color: #ffcc99;">41223118<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/icS0fJOZO1c?si=tMA8fXPNwNSJiS_E" title="YouTube video player" width="560"></iframe></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223122<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223131<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223134<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223136<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223158<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p><h2>reflections</h2>
+<p><span style="background-color: #ffcc99;">41223118</span><strong>：</strong></p>
+<p>過程最為反覆的可能是 <span>webotsw --steam</span><span> </span>啟動webots的串流，確認可攜啟動端是否有加入Webots 內建的動態連結程式庫，然後先<span> </span><span>Run simulation</span>，執行<span> </span><span>server</span>，然後再執行<span> </span><span>client</span><span> </span>後進行控制，這樣子的與組員們反覆的測試sever端的執行程式，在過程上認為難的不是連線，而是在編寫sever的收到客戶端執行指令，最常卡住的地方就是伺服器有收到客戶端訊號卻沒有執行內容，雖然也有配合GTP來減少工作量，但其實也不是能盲目相信，出來的程式還是需稍微看過，確認是否有無程式漏寫或干涉的。</p>
+<p>其實在對於IPV6的連線與webots最後串流的呈現上，其實覺得還是需在去加強理解，因為會發現在顯示伺服器網址時常常會因為<span>無法搜尋至該網址</span>而顯得不知所措，在事後在自家主機使用串流連線時，設定port和防火牆的部分也認為還不夠理解的很清楚，這幾點在製作流程下來覺得還需再去深入探討研究。</p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223122<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223131<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223134<span style="background-color: #ffffff;"><strong>：</strong></span></span></p>
+<p><span style="background-color: #ffcc99;"><span style="background-color: #ffffff;"><strong></strong></span></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223136<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p>
+<hr/>
+<p><span style="background-color: #ffcc99;">41223158<strong><span style="background-color: #ffffff;">：</span></strong></span></p>
+<p><span style="background-color: #ffcc99;"><strong><span style="background-color: #ffffff;"></span></strong></span></p><h1>list</h1>
+<p>網站：</p>
+<p>41223118：<a href="https://mdecd2025.github.io/hw-zhe41223118/">https://mdecd2025.github.io/hw-zhe41223118/</a></p>
+<p>41223122：<a href="https://mdecd2025.github.io/hw-Spirit0224/content/index.html">https://mdecd2025.github.io/hw-Spirit0224/</a></p>
+<p>41223131：<a href="https://mdecd2025.github.io/hw-yuhao-08/content/index.html">https://mdecd2025.github.io/hw-yuhao-08/</a></p>
+<p>41223134：<a href="https://mdecd2025.github.io/hw-41223134">https://mdecd2025.github.io/hw-41223134</a></p>
+<p>41223136：<a class="Link--inTextBlock" href="https://mdecd2025.github.io/hw-41223136/">https://mdecd2025.github.io/hw-41223136/</a></p>
+<p>41223158：<a href="https://mdecd2025.github.io/hw-41223158">https://mdecd2025.github.io/hw-41223158</a></p>
+<hr/>
+<p>倉儲：</p>
+<p>41223118：<a href="https://github.com/mdecd2025/hw-zhe41223118">https://github.com/mdecd2025/hw-zhe41223118</a></p>
+<p>41223122：<a href="https://github.com/mdecd2025/hw-Spirit0224/settings/pages">https://github.com/mdecd2025/hw-Spirit0224</a></p>
+<p>41223131：<a href="https://github.com/mdecd2025/hw-yuhao-08">https://github.com/mdecd2025/hw-yuhao-08</a></p>
+<p>41223134：<a href="https://github.com/mdecd2025/hw-41223134">https://github.com/mdecd2025/hw-41223134</a></p>
+<p>41223136：<a href="https://github.com/mdecd2025/hw-41223136">https://github.com/mdecd2025/hw-41223136</a> </p>
+<p>41223158：<a href="https://github.com/mdecd2025/hw-41223158">https://github.com/mdecd2025/hw-41223158</a></p>
+<hr/>
+<p>Brython-列出組員倉儲及網站<strong><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/090a231f6023298fe6c79d75c648919b/raw/fa0f0e27e983890ed8aad90e573017faa39c9f32/ag4-w1">連結</a></strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document, window
+  
+# 定義資料來源 URL
+url = "https://mde.tw/list/2a.txt"
+  
+# 定義要查找的學號列表
+target_ids = ["41223118", "41223122", "41223131", "41223134", "41223136", "41223158"]
+  
+# 顯示學員數量
+print("正在處理...")
+  
+# 取得 HTML 中的元素 id 為 "brython_div1"
+brython_div1 = document["brython_div1"]
+  
+# 使用 JavaScript 的 fetch API 來抓取資料
+def process_data(response_text):
+    # 將抓取到的資料分行
+    data = response_text.splitlines()
+  
+    # 跳過標題行，取得學員資料
+    all_stud = data[1:]
+  
+    # 逐行處理學員資料
+    for stud in all_stud:
+        # 假設學員資料的格式為 "學號 學員賬號"
+        student_info = stud.strip().split()  # 使用 split() 將每行分為學號和帳號
+        if len(student_info) == 2:  # 確保每行有學號和帳號
+            student_id = student_info[0].strip()  # 學號
+            student_account = student_info[1].strip()  # 學員賬號
+  
+            # 檢查學號是否在目標學號列表中
+            if student_id in target_ids:
+                # 創建 GitHub 和作業網站的超鏈接
+                github_link = f"https://github.com/mdecd2025/hw-{student_account}"
+                homework_link = f"https://mdecd2025.github.io/hw-{student_account}/"
+                  
+                # 顯示該學號的 GitHub 和作業網站
+                brython_div1 &lt;= html.A(student_id, href=github_link)  # 學號是 GitHub repo 連結
+                brython_div1 &lt;= " "  # 空格
+                brython_div1 &lt;= html.A("(repo)", href=homework_link)  # 作業網站的超鏈接標題為 (repo)
+                brython_div1 &lt;= html.BR()  # 換行
+  
+# 使用 JavaScript 的 fetch API 拉取資料
+window.fetch(url).then(lambda response: response.text()).then(process_data)
+</pre>
+<p></p>
+<h1>Final</h1>
+=======
 <p>這是Webots中控制器的<span style="color: #ff0000;">核心概念</span>，<span style="color: #ff0000;">強調其獨立性與語言支援的多樣性</span>。</p>
 <p>Q6：什麼是監督控制器?</p>
 <ol>
@@ -148,7 +1327,12 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><span><span style="background-color: #ffff99;"><span style="background-color: #ffffff;"></span></span></span></p>
 <h2>w11</h2>
 <p>webots小組協同模擬及 fourbar_box複習</p>
-<h2>w12</h2><h1>Tutorial</h1>
+<h2>w12</h2>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<h1>Tutorial</h1>
+=======
+<p>本週開始需依照team上，在規定時間完成對應的HW、Exam等網頁內容，並在規定時間內完成表單填寫。</p><h1>Tutorial</h1>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 59201e36e19dd3c2b8f0ba50f2ec83d474b63a67
 <h2>Tutorial1</h2>
 <p>練習webots使用方法，<span>熟悉 Webots 的使用者介面與基本概念</span></p>
 <p>操作影片：</p>
@@ -166,7 +1350,8 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><span style="background-color: #ffffff;">以下是影片：</span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EoFxRAqJ5Sg?si=sp_Wd8pjIq6v9ryw" title="YouTube video player" width="560"></iframe></p>
 <p>因為後續軟體跳掉下面是後續結果：</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/daTUj9EMIR0?si=Eo3_QDpStIXlcjl7" title="YouTube video player" width="560"></iframe></p><h1>task</h1>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/daTUj9EMIR0?si=Eo3_QDpStIXlcjl7" title="YouTube video player" width="560"></iframe></p>
+<h1>task</h1>
 <h2>task1</h2>
 <p>以下將要利用程式方法列出學員的作業倉儲與網頁連結, 以及各分組的倉儲及網站連結</p>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲</a></p>
@@ -235,7 +1420,6 @@ for i in all_stud:
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW1 - 學員學號</p>
 <p>題目要求尺寸：<span>利用 box 幾何外形節點建立平面四連桿機構的模擬場景，要求地面<span style="background-color: #ffff00;">固定桿長度 1m</span>，<span style="background-color: #ffff00;">寬高各為 0.1m</span>，<span style="background-color: #ffff00;">第一桿長度 0.4m</span>，<span style="background-color: #ffff00;">第二桿長度 0.6m</span>，<span style="background-color: #ffff00;">第三桿長度 0.9m</span>。</span></p>
-<p>我將分成4個部分，1~2連桿的操作影片、2~3的操作影片、3~4的操作影片、4~1的操作影片</p>
 <p>檔案：<a href="/downloads/HW1.7z">HW1-41223136.7z</a></p>
 <p>第一部分：1~2連桿的影片</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-xl9PCPDGyE?si=T5itUKZpwAfGXcB7" title="YouTube video player" width="560"></iframe></p>
@@ -246,8 +1430,13 @@ for i in all_stud:
 <p>第四部份：4~1連桿的影片</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bSPnGaCRbXs?si=xwm8_s5fXUNvfmc0" title="YouTube video player" width="560"></iframe></p>
 <p>後續須將馬達移除，只留一顆，並新增特殊條件(static environment)。</p>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p></p>
+<h2>HW2</h2>
+=======
 <p><span style="background-color: #ffff00;">心得</span>：因為是初次操作webots，所以有點難上手，一不小心就會漏掉一個部分，就要重新檢查，連接joint~link的節點要很清楚是哪個桿件指向於到哪個，自己也要了解節點的位置和旋轉的rad方向，位置錯誤就有可能無法轉動等等 。</p>
 <p></p><h2>HW2</h2>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 59201e36e19dd3c2b8f0ba50f2ec83d474b63a67
 <p>HW2 (5%): <span style="background-color: #ffff00;">建立由 CAD 繪製零件組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 學員學號</p>
 <hr/>
@@ -256,7 +1445,8 @@ for i in all_stud:
 <p><span style="color: #000000; background-color: #ffff00;"><span style="background-color: #ffffff;"> 影片：</span></span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NS45G6Kbdd8?si=1VboeXcuGe1AMEX5" title="YouTube video player" width="560"></iframe></p>
 <p>因後續閃退補後面過程：</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/K-1qshPua00?si=LBIPshRX25pr0wj4" title="YouTube video player" width="560"></iframe></p><h2>HW3</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/K-1qshPua00?si=LBIPshRX25pr0wj4" title="YouTube video player" width="560"></iframe></p>
+<h2>HW3</h2>
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
 <hr/>
@@ -356,6 +1546,7 @@ for i in all_stud:
 <hr/>
 <p>Exam3影片：</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5iofMhSEqBk?si=3CNE4Z-l2qJfT5eU" title="YouTube video player" width="560"></iframe></p><h1>Final</h1>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 34cc45080483539fdd32ca8eefd0f4702521e659
 <p><span>期末協同專案執行過程影片、簡報與 PDf 報告檔案 (六人一組) (30%)</span></p>
 <p><span>題目: <span style="background-color: #ccffcc;">Webots 動態投籃模擬系統的協同設計</span></span></p>
 <p><span>說明: </span></p>
