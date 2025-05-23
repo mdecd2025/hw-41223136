@@ -3302,4 +3302,4 @@ def snTosr(tag):
     else:
         return tagStr
 if __name__ == "__main__":
-    app.run()
+    app.run(host="::", port=9443, debug=True)

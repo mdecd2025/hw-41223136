@@ -10,10 +10,6 @@ config_dir = _curdir + "/config/"
 class Init(object):
     # uwsgi as static class variable, can be accessed by Init.uwsgi
     uwsgi = False
-    site_title = "cdproject"
-    ip = "2001:288:6004:17:fff1:cd25:0:a024"
-    dynamic_port = 9444
-    static_port = 8444
     site_title = "cd_hw"
     ip = "2001:288:6004:17:fff1:cd25:0000:a039"
     dynamic_port = 9443
