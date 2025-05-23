@@ -9138,7 +9138,6 @@ def send_static():
 
     """Set css for admin
     """
-<<<<<<< HEAD
     
     server_ip = init.Init.ip
     # need to check for IPv4 or IPv6
@@ -9158,11 +9157,6 @@ def send_static():
         server_address = str(server_ip) + ":" + str(static_port)
     else:
         server_address = "[" + str(server_ip) + "]:" + str(static_port)
-=======
-
-    server_ip = 'localhost'
-    server_address = str(server_ip) + ":" + str(static_port)
->>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
 
     outstring = '''&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -9226,7 +9220,6 @@ window.location= 'https://' + location.host + location.pathname + location.searc
     """Set css for dynamic site
     """
     
-<<<<<<< HEAD
     server_ip = init.Init.ip
     # need to check for IPv4 or IPv6
     # 根據 IP 地址自動選擇 address family
@@ -9245,11 +9238,6 @@ window.location= 'https://' + location.host + location.pathname + location.searc
         server_address = str(server_ip) + ":" + str(static_port)
     else:
         server_address = "[" + str(server_ip) + "]:" + str(static_port)
-=======
-    # use https://localhost:static_port for static site after start_static starting
-    server_ip = 'localhost'
-    server_address = str(server_ip) + ":" + str(static_port)
->>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
 
     outstring = '''&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -65219,7 +65207,6 @@ token = password_generator()
 本次 2021.07.10 要將用戶選用的標題中特殊符號予以移除</t>
 <t tx="yen.20210906215717.1">@app.route('/start_static/')
 def start_static():
-<<<<<<< HEAD
     """Start local static server in https with IPv4/IPv6 support"""
     
     if isAdmin():
@@ -65240,15 +65227,6 @@ def start_static():
                 except socket.error:
                     # 如果都不是有效的 IP，假設是 hostname 或 localhost
                     address_family = socket.AF_INET6 if ':' in server_address else socket.AF_INET
-=======
-    """Start local static server in https"""
-    
-    if isAdmin():
-        try:
-            server_address = 'localhost'
-            server_port = static_port
-            address_family = socket.AF_INET
->>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
             
             # 創建 SSL context
             ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
@@ -65267,7 +65245,6 @@ def start_static():
             # 創建 socket 並套用 SSL
             httpd.socket = socket.socket(address_family, socket.SOCK_STREAM)
             httpd.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-<<<<<<< HEAD
             
             # 為 IPv6 添加雙棧支援（如果系統支援）
             if address_family == socket.AF_INET6:
@@ -65276,8 +65253,6 @@ def start_static():
                 except (AttributeError, socket.error):
                     pass  # 如果系統不支援雙棧，就使用純 IPv6
             
-=======
->>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
             httpd.socket = ssl_context.wrap_socket(
                 httpd.socket,
                 server_side=True
@@ -65287,13 +65262,9 @@ def start_static():
             httpd.socket.bind((server_address, server_port))
             httpd.server_activate()
             
-<<<<<<< HEAD
             # 根據 address family 顯示適當的協議資訊
             protocol = "IPv6" if address_family == socket.AF_INET6 else "IPv4"
             print(f"HTTPS Server started at https://{server_address}:{server_port} using {protocol}")
-=======
-            print(f"HTTPS Server started at https://{server_address}:{server_port}")
->>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
             httpd.serve_forever()
             
         except ssl.SSLError as e:
