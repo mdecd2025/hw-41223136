@@ -60,7 +60,11 @@ tinymce.PluginManager.add('sh4tinymce', function(editor,url) {
 				{text: 'JavaFX',		value: 'jfx'},
 				{text: 'JavaScript',	value: 'js'},
 				{text: 'Lua',	value: 'lua'},
+<<<<<<< HEAD
         {text: 'Mojo',	value: 'mojo'},
+=======
+                {text: 'Mojo',	value: 'mojo'},
+>>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
 				{text: 'Perl',			value: 'perl'},
 				{text: 'PHP',			value: 'php'},
 				{text: 'PowerShell',	value: 'ps'},
@@ -70,6 +74,10 @@ tinymce.PluginManager.add('sh4tinymce', function(editor,url) {
 				{text: 'Scala',			value: 'scala'},
 				{text: 'SQL',			value: 'sql'},
 				{text: 'Text',			value: 'plain'},
+<<<<<<< HEAD
+=======
+                {text: 'WBT',			value: 'wbt'},
+>>>>>>> 34cc45080483539fdd32ca8eefd0f4702521e659
 				{text: 'Visual Basic',	value: 'vb'},
 				{text: 'XML',			value: 'xml'}
 		];
