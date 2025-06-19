@@ -142,11 +142,16 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w9 << <a href='w9.html'>Previous</a> <a href='w11.html'>Next</a> >> w11<br /><h1>w10</h1>
-<p>已知Webots2025a有bug，無法使用<span><span style="background-color: #ffff99;">Transform 節點和閃退的問題<span style="background-color: #ffffff;">，因此可以下載<a href="http://229.cycu.org/Webots_2023b.7z">Webots2023b</a>版本。</span></span></span></p>
-<p><span><span style="background-color: #ffff99;"><span style="background-color: #ffffff;">若想要擁有2025a的版本和2023b的版本可以在編輯器內將2025a的文字更改為2023b，並另存新檔即可。</span></span></span></p>
-<p><span><span style="background-color: #ffff99;"><span style="background-color: #ffffff;"></span></span></span></p>
-<br />w9 << <a href='w9.html'>Previous</a> <a href='w11.html'>Next</a> >> w11</div>
+    <div id="tipue_search_content">Question << <a href='Question.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>HW1.</h1>
+<p>Q1：在<span>製作 HW1 之前是否實際練習 Tutorial1 與 Tutorial2?</span></p>
+<p><span>A：有，Tutorial1的操作主要目的是學習如何儲存檔案場景(worlds)、節點(protos)、controllers(控制器程式)、plugins(物理特性的C或C++程式)和libraries(與controllers或plugins目錄中相關的共用程式庫)。</span></p>
+<p><span>Tutorial2說明如何使用webots內建的基本幾何物件、物體碰撞，建立物件時必須按照Solid-shape-geometry的結構，其中Solid-shape-geometry Box可以直接使用內建的節點定義外型，而mesh可以導入自行繪製完成的stl或obj檔案。</span></p>
+<p><span>Q2：Webots 中的 "Supervisor" 是什麼？它與一般機器人控制器有何不同？</span></p>
+<p><span>A：supervisor可以監測多台的機器人，讓他們互相合作或進行比較分析等等。</span></p>
+<p><span>它與其它機器人不一樣的地方在supervisor可以控制整個模擬世界，可以讀取任何一台機器人的狀態資料，而controllers只能控制一台機器人，並且無法獲取其他機器人的資訊。</span></p>
+<p><span>Q3：</span>如何在 Webots 中為機器人新增感測器？請說明基本步驟。</p>
+<p>A：建立一個robot，在children底下建立一個感測器(Distancesensor或GPS等等)就可以了，要接收訊號就必須依靠<span>Receiver和Emitter，Receiver是負責接收訊息而Emitter是負責發送訊息，channel是傳遞頻道的作用。</span></p>
+<p><span></span></p><br />Question << <a href='Question.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
